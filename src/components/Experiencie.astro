@@ -1,0 +1,22 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Septiembre 2022 - Diciembre 2022",
+    title: "Programador PHP - Eximo Software",
+    description:
+      "Durante mi participación en el desarrollo de la aplicación web ADUS/IPVU para la provincia de Neuquén, tuve la responsabilidad tanto del front-end como del back-end del proyecto. Utilicé el framework Yii 2 en conjunto con PHP para llevar a cabo estas tareas, asegurando así un desarrollo eficiente y robusto.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+  {
+    EXPERIENCE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

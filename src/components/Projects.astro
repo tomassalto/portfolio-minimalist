@@ -1,0 +1,53 @@
+---
+import Php from "../components/icons/Php.astro";
+import Javascript from "../components/icons/Javascript.astro";
+
+const TAGS = {
+  PHP: {
+    name: "Php",
+    class: "bg-fuchsia-300 text-black",
+    icon: Php,
+  },
+  JAVASCRIPT: {
+    name: "Javascript",
+    class: "bg-white text-black",
+    icon: Javascript,
+  },
+};
+const PROJETCS = [
+  {
+    title: "Project",
+    description: "lorem importedum in a project file",
+    link: "https://github.com/",
+    github: "https://github.com/",
+    image: "../../public/musictime.webp",
+    tags: [TAGS.PHP, TAGS.JAVASCRIPT],
+  },
+];
+---
+
+{
+  PROJETCS.map(({ title, image, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2 mb-5`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}
