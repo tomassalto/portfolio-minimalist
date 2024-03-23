@@ -1,9 +1,14 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import LanguagePicker from "./LanguagePicker.astro";
+
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+type tLang = (str: any) => any;
+
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const t: tLang = useTranslations(lang);
+
 const { currentLocale } = Astro;
 
 const navItems = [
@@ -22,16 +27,6 @@ const navItems = [
     label: "sobre-mi",
     url: currentLocale === "en" ? "/en#sobre-mi" : "/#sobre-mi",
   },
-  {
-    title: t("nav.skills"),
-    label: "skills",
-    url: currentLocale === "en" ? "/en#skills" : "/#skills",
-  },
-  {
-    title: t("nav.contact"),
-    label: "contacto",
-    url: "mailto:tomasagustinsalto@gmail.com",
-  },
 ];
 ---
 
@@ -39,12 +34,12 @@ const navItems = [
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="flex mdx:text-xl px-3 xsm:text-xs sm:text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
   >
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+          class="relative sm:text-center block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
           aria-label={link.label}
           href={link.url}
         >

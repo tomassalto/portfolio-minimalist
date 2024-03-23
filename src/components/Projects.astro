@@ -46,7 +46,9 @@ interface ProjectType {
 const PROJECTS: ProjectType[] = t("projects");
 ---
 
-<div class="flex flex-col gap-y-16">
+<div
+  class="flex flex-col gap-y-16 lg:bg-gray-100 lg:dark:bg-[#1A1A1A] p-4 lg:rounded-[25px] lg:shadow-lg"
+>
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
@@ -84,7 +86,7 @@ const PROJECTS: ProjectType[] = t("projects");
               })}
             </ul>
 
-            <div class="mt-2 text-gray-700 dark:text-gray-400">
+            <div class="mt-2 text-gray-700 dark:text-gray-400 text-pretty">
               {description}
             </div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">

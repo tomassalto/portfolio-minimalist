@@ -17,6 +17,17 @@ import TailwindIcon from "../components/icons/stack/Tailwind.astro";
 import TypeScriptIcon from "../components/icons/stack/TypeScript.astro";
 import VSCodeIcon from "../components/icons/stack/VSCode.astro";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+type tLang = (str: any) => any;
+const lang = getLangFromUrl(Astro.url);
+const t: tLang = useTranslations(lang);
+
+type Skill = {
+  name: String;
+};
+
+const SKL: Skill[] = t("skills");
+
 import Container from "../components/Container.astro";
 
 const MY_STACK = {
@@ -49,55 +60,62 @@ const MY_STACK = {
 ---
 
 <section class="flex items-center justify-center py-4 md:py-8 flex-wrap">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8">
-    <div class="py-9 px-1">
-      <div
-        class="relative rounded-2xl p-6 dark:border dark:border-dark-900 py-9 px-4 h-full flex flex-col justify-between"
-      >
-        <h3
-          class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#54fbff] to-[#00a4c9] dark:from-[#c9fffe] dark:to-[#00cfef] bg-clip-text text-transparent"
-        >
-          Frontend
-        </h3>
-        <ul class="grid grid-cols-3 gap-4 flex-grow">
-          {
-            MY_STACK.frontend.map((skill) => (
-              <li class="rounded-2xl  group flex flex-col justify-center items-center">
-                <skill.icon class="size-12 mb-2" />
-                <span class="text-sm w-full text-center">{skill.name}</span>
-              </li>
-            ))
-          }
-        </ul>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 gap-x-8 sm:grid-cols-1 sm:gap-x-4"
+  >
+    <article
+      class="flex flex-col mb-8 lg:mb-4 gap-y-16 sm:gap-y-8 bg-gray-100 dark:bg-[#1A1A1A] rounded-[25px] lg:bg-gray-100 lg:dark:bg-[#1A1A1A] p-4 lg:rounded-[25px] sm:shadow-lg sm:bg-gray-100 sm:dark:bg-[#1A1A1A] sm:rounded-[25px]"
+    >
+      <div class="py-4 px-1">
+        <div class="py-4 px-4 h-full flex flex-col justify-between">
+          <h3
+            class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#54fbff] to-[#00a4c9] dark:from-[#c9fffe] dark:to-[#00cfef] bg-clip-text text-transparent"
+          >
+            Frontend
+          </h3>
+          <ul class="grid grid-cols-3 gap-4 flex-grow">
+            {
+              MY_STACK.frontend.map((skill) => (
+                <li class="rounded-2xl  group flex flex-col justify-center items-center">
+                  <skill.icon class="size-12 mb-2" />
+                  <span class="text-sm w-full text-center">{skill.name}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="py-9 px-1">
-      <div
-        class="py-9 px-4 h-full flex flex-col justify-between relative rounded-2xl p-6 dark:border dark:border-dark-900"
-      >
-        <h3
-          class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#54fbff] to-[#00a4c9] dark:from-[#c9fffe] dark:to-[#00cfef] bg-clip-text text-transparent"
-        >
-          Backend
-        </h3>
-        <ul class="grid grid-cols-3 gap-4 flex-grow">
-          {
-            MY_STACK.backend.map((skill) => (
-              <li class="rounded-2xl  group flex flex-col justify-center items-center">
-                <skill.icon class="size-12 mb-2" />
-                <span class="text-sm w-full text-center">{skill.name}</span>
-              </li>
-            ))
-          }
-        </ul>
+    </article>
+    <article
+      class="flex flex-col gap-y-16 mb-8 lg:mb-4 bg-gray-100 dark:bg-[#1A1A1A] rounded-[25px] lg:bg-gray-100 lg:dark:bg-[#1A1A1A] p-4 lg:rounded-[25px] sm:shadow-lg sm:bg-gray-100 sm:dark:bg-[#1A1A1A] sm:rounded-[25px]"
+    >
+      <div class="py-4 px-1">
+        <div class="py-4 px-4 h-full flex flex-col justify-between">
+          <h3
+            class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#54fbff] to-[#00a4c9] dark:from-[#c9fffe] dark:to-[#00cfef] bg-clip-text text-transparent"
+          >
+            Backend
+          </h3>
+          <ul class="grid grid-cols-3 gap-4 flex-grow">
+            {
+              MY_STACK.backend.map((skill) => (
+                <li class="rounded-2xl  group flex flex-col justify-center items-center">
+                  <skill.icon class="size-12 mb-2" />
+                  <span class="text-sm w-full text-center">{skill.name}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="py-9 px-1 md:col-span-2">
-      <div
-        class="py-9 px-5 h-full flex flex-col justify-between relative rounded-2xl p-6 dark:border dark:border-dark-900"
-      >
+    </article>
+
+    <article
+      class="flex flex-col gap-y-16 bg-gray-100 dark:bg-[#1A1A1A] rounded-[25px] lg:bg-gray-100 lg:dark:bg-[#1A1A1A] p-4 lg:rounded-[25px] sm:col-span-2 mb-8 lg:mb-4 lg:shadow-lg sm:bg-gray-100 sm:dark:bg-[#1A1A1A] sm:rounded-[25px] sm:shadow-sm"
+    >
+      <div class="py-4 px-5 h-full flex flex-col justify-between">
         <h3
-          class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#ffb272] to-[#ee4a08] dark:from-[#ffebd4] dark:to-[#fd6412] bg-clip-text text-transparent"
+          class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#ffb272] to-[#eab308] dark:from-[#ffebd4] dark:to-[#eab308] bg-clip-text text-transparent"
         >
           Aprendiendo
         </h3>
@@ -112,11 +130,11 @@ const MY_STACK = {
           }
         </ul>
       </div>
-    </div>
-    <div class="py-10 px-1 md:col-span-2">
-      <div
-        class="relative rounded-2xl p-6 dark:border dark:border-dark-900 py-4 px-4 h-full flex flex-col justify-between"
-      >
+    </article>
+    <article
+      class="flex flex-col gap-y-16 bg-gray-100 dark:bg-[#1A1A1A] rounded-[25px] lg:bg-gray-100 lg:dark:bg-[#1A1A1A] p-4 lg:rounded-[25px] sm:col-span-2 mb-8 lg:mb-4 lg:shadow-lg sm:bg-gray-100 sm:dark:bg-[#1A1A1A] sm:rounded-[25px] sm:shadow-sm"
+    >
+      <div class="py-4 px-4 h-full flex flex-col justify-between">
         <h3
           class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#75dbff] to-[#0072ab] dark:from-[#def3ff] dark:to-[#00a8e8] bg-clip-text text-transparent"
         >
@@ -133,7 +151,7 @@ const MY_STACK = {
           }
         </ul>
       </div>
-    </div>
+    </article>
     <div class="md:hidden">
       <!-- Aquí va la tarjeta en una sola columna -->
     </div>

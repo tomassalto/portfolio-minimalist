@@ -1,3 +1,21 @@
+import GitHubIcon from "../components/icons/GitHub.astro";
+import AstroIcon from "../components/icons/stack/AstroIcon.astro";
+import CSSIcon from "../components/icons/stack/CSS.astro";
+import ExpressIcon from "../components/icons/stack/Express.astro";
+import GitIcon from "../components/icons/stack/Git.astro";
+import HtmlIcon from "../components/icons/stack/Html.astro";
+import JavaScriptIcon from "../components/icons/stack/JavaScript.astro";
+import LaravelIcon from "../components/icons/stack/Laravel.astro";
+import MySQLIcon from "../components/icons/stack/MySQL.astro";
+import NextJSIcon from "../components/icons/stack/NextJS.astro";
+import NodeJSIcon from "../components/icons/stack/NodeJS.astro";
+import NpmIcon from "../components/icons/stack/Npm.astro";
+import PHPIcon from "../components/icons/stack/PHP.astro";
+import ReactJSIcon from "../components/icons/stack/ReactJS.astro";
+import TailwindIcon from "../components/icons/stack/Tailwind.astro";
+import TypeScriptIcon from "../components/icons/stack/TypeScript.astro";
+import VSCodeIcon from "../components/icons/stack/VSCode.astro";
+
 export const languages = {
   es: "ES",
   en: "US",
@@ -13,7 +31,7 @@ export const ui = {
     "nav.home": "Experiencia",
     "nav.projects": "Proyectos",
     "nav.about": "Sobre mí",
-    "nav.skills": "Skills",
+    "nav.skills": "Tecnologias",
     "nav.contact": "Contacto",
     "hero.badge": "Disponible para trabajar",
     "hero.title": "Hola, soy Tomás",
@@ -23,7 +41,7 @@ export const ui = {
     "hero.linkedin": "LinkedIn",
     "exp.title": "Experiencia laboral",
     "projects.title": "Proyectos",
-    "skills.title": "Teconologias",
+    "skills.title": "Tecnologias",
     "about.title": "Sobre mí",
     "about.bio": `<p>Me llamo Tomás. Empecé en la programación de forma autodidacta en Youtube. Actualmente estoy <strong> en el ultimo año de mi Tecnicatura Universitaria</strong>.</p><p>Algunos de mis éxitos incluyen <strong>colaborar con ADUS/IPVU para el desarrollo de una App de gestión de viviendas en la Provincia de  <span class='text-sky-400'> Neuquén</span></strong>.</p><p>Como Desarrollador Web, he logrado desarrollar un E-commerce con PHP vanilla desde cero creando asi <strong> <em class="italic"> sistema de Login, compras y su respectivo carrito, cambio de estado de compras, integracion con Symfony Mailer y DomPDF para envio de mails y pdf con su respectivo comprobante.</em></strong> Aprendiendo asi las bases de la Prógramación sin la necesidad de Frameworks.</p>`,
     "footer.rights": "Casi todos los derechos reservados",
@@ -53,6 +71,35 @@ export const ui = {
         link: "https://adventjs.dev",
         image: "../../public/musictime.png",
         tags: ["nextjs", "tailwindcss"],
+      },
+    ],
+    skills: [
+      {
+        frontend: [
+          { name: "HTML", icon: HtmlIcon },
+          { name: "CSS", icon: CSSIcon },
+          { name: "JavaScript", icon: JavaScriptIcon },
+          { name: "ReactJS", icon: ReactJSIcon },
+          { name: "TailwindCSS", icon: TailwindIcon },
+        ],
+        backend: [
+          { name: "PHP", icon: PHPIcon },
+          { name: "NodeJS", icon: NodeJSIcon },
+          { name: "Laravel", icon: LaravelIcon },
+          { name: "ExpressJS", icon: ExpressIcon },
+          { name: "MySQL", icon: MySQLIcon },
+          { name: "Next.js", icon: NextJSIcon },
+        ],
+        learning: [
+          { name: "Astro", icon: AstroIcon },
+          { name: "TypeScript", icon: TypeScriptIcon },
+        ],
+        tools: [
+          { name: "Git", icon: GitIcon },
+          { name: "GitHub", icon: GitHubIcon },
+          { name: "VSCode", icon: VSCodeIcon },
+          { name: "Npm", icon: NpmIcon },
+        ],
       },
     ],
   },
@@ -104,6 +151,35 @@ export const ui = {
         link: "https://adventjs.dev",
         image: "/projects/adventjs.webp",
         tags: ["nextjs", "tailwindcss"],
+      },
+    ],
+    skills: [
+      {
+        frontend: [
+          { name: "HTML", icon: HtmlIcon },
+          { name: "CSS", icon: CSSIcon },
+          { name: "JavaScript", icon: JavaScriptIcon },
+          { name: "ReactJS", icon: ReactJSIcon },
+          { name: "TailwindCSS", icon: TailwindIcon },
+        ],
+        backend: [
+          { name: "PHP", icon: PHPIcon },
+          { name: "NodeJS", icon: NodeJSIcon },
+          { name: "Laravel", icon: LaravelIcon },
+          { name: "ExpressJS", icon: ExpressIcon },
+          { name: "MySQL", icon: MySQLIcon },
+          { name: "Next.js", icon: NextJSIcon },
+        ],
+        learning: [
+          { name: "Astro", icon: AstroIcon },
+          { name: "TypeScript", icon: TypeScriptIcon },
+        ],
+        tools: [
+          { name: "Git", icon: GitIcon },
+          { name: "GitHub", icon: GitHubIcon },
+          { name: "VSCode", icon: VSCodeIcon },
+          { name: "Npm", icon: NpmIcon },
+        ],
       },
     ],
   },
