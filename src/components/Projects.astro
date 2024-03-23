@@ -1,53 +1,109 @@
 ---
-import Php from "../components/icons/Php.astro";
-import Javascript from "../components/icons/Javascript.astro";
+import GitHub from "./icons/GitHub.astro";
+import AstroIcon from "./icons/stack/AstroIcon.astro";
+import Tailwind from "./icons/Javascript.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
-const TAGS = {
-  PHP: {
-    name: "Php",
-    class: "bg-fuchsia-300 text-black",
-    icon: Php,
+type tLang = (str: any) => any;
+
+const lang = getLangFromUrl(Astro.url);
+const t: tLang = useTranslations(lang);
+
+type TagType = {
+  name: string;
+  class: string;
+  icon: (_props: Record<string, any>) => any;
+};
+
+type TagsType = {
+  [key: string]: TagType;
+};
+
+const TAGS: TagsType = {
+  nextjs: {
+    name: "Next.js",
+    class: "bg-[#000] text-white dark:bg-white dark:text-[#000]",
+    icon: AstroIcon,
   },
-  JAVASCRIPT: {
-    name: "Javascript",
-    class: "bg-white text-black",
-    icon: Javascript,
+  tailwindcss: {
+    name: "Tailwind CSS",
+    class: "bg-[#06b6d4] text-white",
+    icon: Tailwind,
   },
 };
-const PROJETCS = [
-  {
-    title: "Project",
-    description: "lorem importedum in a project file",
-    link: "https://github.com/",
-    github: "https://github.com/",
-    image: "../../public/musictime.webp",
-    tags: [TAGS.PHP, TAGS.JAVASCRIPT],
-  },
-];
+
+interface ProjectType {
+  image: string;
+  imageAlt: string;
+  title: string;
+  description: string;
+  tags: string[];
+  link?: string;
+  github?: string;
+}
+const PROJECTS: ProjectType[] = t("projects");
 ---
 
-{
-  PROJETCS.map(({ title, image, description, tags }) => (
-    <article>
-      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-2 flex-row">
-        {tags.map((tag) => (
-          <li>
-            <span
-              class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2 mb-5`}
-            >
-              <tag.icon class="size-4" />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        class="rounded shadow-2xl shadow-white/10"
-        src={image}
-        alt={`Captura de pantalla del proyecto ${image}`}
-      />
-    </article>
-  ))
-}
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-wrap mb-2 gap-x-2">
+              {tags.map((item) => {
+                const tag: TagType = TAGS[item];
+                if (tag) {
+                  return (
+                    <li>
+                      <span
+                        class={`flex gap-x-2 mt-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                      >
+                        <tag.icon class="size-4" />
+                        {tag.name}
+                      </span>
+                    </li>
+                  );
+                }
+              })}
+            </ul>
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>

@@ -1,6 +1,5 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-
 import AboutMe from "@/components/AboutMe.astro";
 import Briefcase from "@/components/icons/Briefcase.astro";
 import CodeIcon from "@/components/icons/Code.astro";
@@ -12,6 +11,7 @@ import Hero from "@/components/Hero.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import Stack from "@/components/Stack.astro";
 import SkillsIcon from "@/components/icons/SkillsIcon.astro";
+import Skills from "@/components/Skills.astro";
 
 type tLang = (str: any) => any;
 
@@ -62,6 +62,7 @@ const t: tLang = useTranslations(lang);
         <SkillsIcon class="size-8" />
         {t("skills.title")}
       </h2>
+
       <Stack />
     </SectionContainer>
   </div>
