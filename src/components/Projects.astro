@@ -5,6 +5,9 @@ import Tailwind from "./icons/Javascript.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import Php from "./icons/Php.astro";
+import Svelte from "./icons/stack/Svelte.astro";
+import TypeScript from "./icons/stack/TypeScript.astro";
 
 type tLang = (str: any) => any;
 
@@ -32,6 +35,26 @@ const TAGS: TagsType = {
     class: "bg-[#06b6d4] text-white",
     icon: Tailwind,
   },
+  php: {
+    name: "Php",
+    class: "bg-[#000] text-white dark:bg-white dark:text-[#000]",
+    icon: Php,
+  },
+  astro: {
+    name: "Astro",
+    class: "bg-[#000] text-white dark:bg-white dark:text-[#000]",
+    icon: AstroIcon,
+  },
+  svelte: {
+    name: "Svelte",
+    class: "bg-[#000] text-white dark:bg-white dark:text-[#000]",
+    icon: Svelte,
+  },
+  typescript: {
+    name: "TypeScript",
+    class: "bg-[#000] text-white dark:bg-white dark:text-[#000]",
+    icon: TypeScript,
+  },
 };
 
 interface ProjectType {
@@ -47,7 +70,7 @@ const PROJECTS: ProjectType[] = t("projects");
 ---
 
 <div
-  class="flex flex-col gap-y-16 lg:bg-gray-100 lg:dark:bg-[#1A1A1A] p-4 lg:rounded-[25px] lg:shadow-lg"
+  class="flex flex-col gap-y-16 bg-gray-100 dark:bg-[#1A1A1A] rounded-[25px] lg:bg-gray-100 lg:dark:bg-[#1A1A1A] p-4 lg:rounded-[25px] lg:shadow-lg"
 >
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
@@ -55,7 +78,7 @@ const PROJECTS: ProjectType[] = t("projects");
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
-              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              alt="profile picture"
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
               loading="lazy"
               src={image}

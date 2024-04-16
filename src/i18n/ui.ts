@@ -1,21 +1,3 @@
-import GitHubIcon from "../components/icons/GitHub.astro";
-import AstroIcon from "../components/icons/stack/AstroIcon.astro";
-import CSSIcon from "../components/icons/stack/CSS.astro";
-import ExpressIcon from "../components/icons/stack/Express.astro";
-import GitIcon from "../components/icons/stack/Git.astro";
-import HtmlIcon from "../components/icons/stack/Html.astro";
-import JavaScriptIcon from "../components/icons/stack/JavaScript.astro";
-import LaravelIcon from "../components/icons/stack/Laravel.astro";
-import MySQLIcon from "../components/icons/stack/MySQL.astro";
-import NextJSIcon from "../components/icons/stack/NextJS.astro";
-import NodeJSIcon from "../components/icons/stack/NodeJS.astro";
-import NpmIcon from "../components/icons/stack/Npm.astro";
-import PHPIcon from "../components/icons/stack/PHP.astro";
-import ReactJSIcon from "../components/icons/stack/ReactJS.astro";
-import TailwindIcon from "../components/icons/stack/Tailwind.astro";
-import TypeScriptIcon from "../components/icons/stack/TypeScript.astro";
-import VSCodeIcon from "../components/icons/stack/VSCode.astro";
-
 export const languages = {
   es: "ES",
   en: "US",
@@ -42,64 +24,38 @@ export const ui = {
     "exp.title": "Experiencia laboral",
     "projects.title": "Proyectos",
     "skills.title": "Tecnologias",
+    "skills.tools": "Herramientas",
+    "skills.learn": "Aprendiendo",
     "about.title": "Sobre mí",
     "about.bio": `<p>Me llamo Tomás. Empecé en la programación de forma autodidacta en Youtube. Actualmente estoy <strong> en el ultimo año de mi Tecnicatura Universitaria</strong>.</p><p>Algunos de mis éxitos incluyen <strong>colaborar con ADUS/IPVU para el desarrollo de una App de gestión de viviendas en la Provincia de  <span class='text-sky-400'> Neuquén</span></strong>.</p><p>Como Desarrollador Web, he logrado desarrollar un E-commerce con PHP vanilla desde cero creando asi <strong> <em class="italic"> sistema de Login, compras y su respectivo carrito, cambio de estado de compras, integracion con Symfony Mailer y DomPDF para envio de mails y pdf con su respectivo comprobante.</em></strong> Aprendiendo asi las bases de la Prógramación sin la necesidad de Frameworks.</p>`,
     "footer.rights": "Casi todos los derechos reservados",
     exp: [
       {
         title: "Programador PHP",
-        date: "Septiembre 2022 - Diciembre 2022",
+        date: "Sept 2022 - Dic 2022",
         company: "Eximo Software",
         description:
-          "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
+          "Como programador PHP, mi enfoque principal era crear la parte front-end y back-end de las aplicaciones. En el front-end, diseñaba y desarrollaba formularios y páginas de usuario. Luego, en el back-end, me encargaba de conectar esos formularios con la lógica de negocio y la base de datos SQL para almacenar y recuperar datos de manera segura.",
       },
     ],
     projects: [
       {
-        title: "SVGL - A beautiful library with SVG logos",
+        title: "MusicTime - Tienda onlines de discos de música",
         description:
-          "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
+          "MusicTime es una aplicación web creada desde cero utilizando PHP Vanilla. Ofrece un carrito de compras, gestión de estados, inicio de sesión y operaciones CRUD con una base de datos MySQL.",
         link: "https://svgl.vercel.app/",
         github: "https://github.com/pheralb/svgl",
-        image: "../../public/musictime.png",
-        tags: ["nextjs", "tailwindcss"],
+        image: "/musictime.png",
+        tags: ["php"],
       },
       {
-        title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+        title: "Chat with your PDF",
         description:
-          "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-        link: "https://adventjs.dev",
-        image: "../../public/musictime.png",
-        tags: ["nextjs", "tailwindcss"],
-      },
-    ],
-    skills: [
-      {
-        frontend: [
-          { name: "HTML", icon: HtmlIcon },
-          { name: "CSS", icon: CSSIcon },
-          { name: "JavaScript", icon: JavaScriptIcon },
-          { name: "ReactJS", icon: ReactJSIcon },
-          { name: "TailwindCSS", icon: TailwindIcon },
-        ],
-        backend: [
-          { name: "PHP", icon: PHPIcon },
-          { name: "NodeJS", icon: NodeJSIcon },
-          { name: "Laravel", icon: LaravelIcon },
-          { name: "ExpressJS", icon: ExpressIcon },
-          { name: "MySQL", icon: MySQLIcon },
-          { name: "Next.js", icon: NextJSIcon },
-        ],
-        learning: [
-          { name: "Astro", icon: AstroIcon },
-          { name: "TypeScript", icon: TypeScriptIcon },
-        ],
-        tools: [
-          { name: "Git", icon: GitIcon },
-          { name: "GitHub", icon: GitHubIcon },
-          { name: "VSCode", icon: VSCodeIcon },
-          { name: "Npm", icon: NpmIcon },
-        ],
+          "Chat with Your PDF, está desarrollada utilizando Astro, TypeScript y Svelte. Los usuarios pueden cargar archivos PDF, y la inteligencia artificial integrada de OpenIA lee el contenido. Además, los usuarios pueden hacer preguntas relacionadas con el PDF, y la IA proporciona respuestas relevantes.",
+        link: "https://chatpdf-tomassalto.netlify.app/",
+        github: "https://github.com/tomassalto/chatPDF",
+        image: "/chatpdf.png",
+        tags: ["astro", "svelte", "typescript"],
       },
     ],
   },
@@ -121,65 +77,38 @@ export const ui = {
     "exp.title": "Professional Experience",
     "projects.title": "Projects",
     "skills.title": "Skills",
+    "skills.learn": "Learning",
+    "skills.tools": "Tools",
     "about.title": "About me",
     "about.bio": `<p>My name is Tomás. I started programming self-taught through Youtube. Currently, I am <strong>in the last year of my University Technical Degree</strong>.</p><p>Some of my achievements include <strong>collaborating with ADUS/IPVU for the development of a housing management App in the Province of <span class='text-sky-400'>Neuquén</span></strong>.</p><p>As a Web Developer, I have successfully developed an E-commerce with vanilla PHP from scratch, thus creating <strong><em class="italic">login system, shopping functionalities including cart, order status change, integration with Symfony Mailer and DomPDF for sending emails and PDFs with respective receipts.</em></strong> Thus learning the foundations of programming without the need for frameworks.</p>`,
     "footer.rights": "Almost all rights reserved",
     exp: [
       {
         title: "PHP Developer",
-        date: "September 2022 - December 2022",
+        date: "Sept 2022 - Dec 2022",
         company: "Eximo Software",
         description:
-          "Responsible for the platform, components, and utilities for the creation and development of web applications. Achieved a 30% improvement in software delivery. Implementation of continuous integration and deployment measures with A/B testing across more than 15 teams.",
+          "As a PHP programmer, my primary responsibilities included creating both the front-end and back-end of applications. On the front-end, I designed and developed user-friendly forms and pages. Subsequently, on the back-end, I connected these forms to business logic and an SQL database for secure data storage and retrieval.",
       },
     ],
     projects: [
       {
-        title: "SVGL - A beautiful library with SVG logos",
+        title: "MusicTime - Ecommerce",
         description:
-          "Library of SVG logos from the most popular brands. +10k visits per month. +2K SVGs downloaded. Created from scratch with Next.js, React, and Tailwind CSS.",
+          "MusicTime is a web application built from scratch using PHP Vanilla. It features a shopping cart, state management, user login, and CRUD operations with a MySQL database.",
         link: "https://svgl.vercel.app/",
-        github: "https://github.com/pheralb/svgl",
-        image: "/projects/svgl.webp",
-        tags: ["nextjs", "tailwindcss"],
+        github: "https://github.com/tomassalto/TpFinalSalto",
+        image: "/musictime.png",
+        tags: ["php"],
       },
       {
-        title:
-          "AdventJS - Programming challenges with JavaScript and TypeScript",
+        title: "Chat with your PDF",
         description:
-          "Free platform with programming challenges. Over 1 million visits in a month. +50K challenges completed. Created from scratch with Next.js, React, and Tailwind CSS.",
-        link: "https://adventjs.dev",
-        image: "/projects/adventjs.webp",
-        tags: ["nextjs", "tailwindcss"],
-      },
-    ],
-    skills: [
-      {
-        frontend: [
-          { name: "HTML", icon: HtmlIcon },
-          { name: "CSS", icon: CSSIcon },
-          { name: "JavaScript", icon: JavaScriptIcon },
-          { name: "ReactJS", icon: ReactJSIcon },
-          { name: "TailwindCSS", icon: TailwindIcon },
-        ],
-        backend: [
-          { name: "PHP", icon: PHPIcon },
-          { name: "NodeJS", icon: NodeJSIcon },
-          { name: "Laravel", icon: LaravelIcon },
-          { name: "ExpressJS", icon: ExpressIcon },
-          { name: "MySQL", icon: MySQLIcon },
-          { name: "Next.js", icon: NextJSIcon },
-        ],
-        learning: [
-          { name: "Astro", icon: AstroIcon },
-          { name: "TypeScript", icon: TypeScriptIcon },
-        ],
-        tools: [
-          { name: "Git", icon: GitIcon },
-          { name: "GitHub", icon: GitHubIcon },
-          { name: "VSCode", icon: VSCodeIcon },
-          { name: "Npm", icon: NpmIcon },
-        ],
+          "Chat with Your PDF, is built using Astro, TypeScript, and Svelte. Users can upload PDF files, and the integrated OpenIA artificial intelligence reads the content. Additionally, users can ask questions related to the PDF, and the AI provides relevant answers.",
+        link: "https://chatpdf-tomassalto.netlify.app/",
+        github: "https://github.com/tomassalto/chatPDF",
+        image: "/chatpdf.png",
+        tags: ["astro", "svelte", "typescript"],
       },
     ],
   },

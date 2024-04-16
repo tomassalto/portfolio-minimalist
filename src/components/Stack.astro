@@ -29,6 +29,7 @@ type Skill = {
 const SKL: Skill[] = t("skills");
 
 import Container from "../components/Container.astro";
+import Postman from "./icons/stack/Postman.astro";
 
 const MY_STACK = {
   frontend: [
@@ -55,6 +56,7 @@ const MY_STACK = {
     { name: "GitHub", icon: GitHubIcon },
     { name: "VSCode", icon: VSCodeIcon },
     { name: "Npm", icon: NpmIcon },
+    { name: "Postman", icon: Postman },
   ],
 };
 ---
@@ -117,7 +119,7 @@ const MY_STACK = {
         <h3
           class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#ffb272] to-[#eab308] dark:from-[#ffebd4] dark:to-[#eab308] bg-clip-text text-transparent"
         >
-          Aprendiendo
+          {t("skills.learn")}
         </h3>
         <ul class="grid grid-cols-3 gap-4 flex-grow">
           {
@@ -138,7 +140,7 @@ const MY_STACK = {
         <h3
           class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#75dbff] to-[#0072ab] dark:from-[#def3ff] dark:to-[#00a8e8] bg-clip-text text-transparent"
         >
-          Herramientas
+          {t("skills.tools")}
         </h3>
         <ul class="grid grid-cols-3 gap-4">
           {
