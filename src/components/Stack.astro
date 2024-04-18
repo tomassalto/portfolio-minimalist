@@ -16,6 +16,8 @@ import ReactJSIcon from "../components/icons/stack/ReactJS.astro";
 import TailwindIcon from "../components/icons/stack/Tailwind.astro";
 import TypeScriptIcon from "../components/icons/stack/TypeScript.astro";
 import VSCodeIcon from "../components/icons/stack/VSCode.astro";
+import Postman from "./icons/stack/Postman.astro";
+import DrupalIcon from "./icons/stack/Drupal.astro";
 
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 type tLang = (str: any) => any;
@@ -27,9 +29,6 @@ type Skill = {
 };
 
 const SKL: Skill[] = t("skills");
-
-import Container from "../components/Container.astro";
-import Postman from "./icons/stack/Postman.astro";
 
 const MY_STACK = {
   frontend: [
@@ -50,6 +49,7 @@ const MY_STACK = {
   learning: [
     { name: "Astro", icon: AstroIcon },
     { name: "TypeScript", icon: TypeScriptIcon },
+    { name: "Drupal", icon: DrupalIcon },
   ],
   tools: [
     { name: "Git", icon: GitIcon },
