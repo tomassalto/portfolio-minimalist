@@ -43,8 +43,7 @@ export const ui = {
         title: "MusicTime - Tienda onlines de discos de música",
         description:
           "MusicTime es una aplicación web creada desde cero utilizando PHP Vanilla. Ofrece un carrito de compras, gestión de estados, inicio de sesión y operaciones CRUD con una base de datos MySQL.",
-        link: "https://svgl.vercel.app/",
-        github: "https://github.com/pheralb/svgl",
+        github: "https://github.com/tomassalto/TpFinalSalto",
         image: "/musictime.png",
         tags: ["php"],
       },
