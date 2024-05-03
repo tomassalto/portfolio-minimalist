@@ -8,6 +8,9 @@ import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import Php from "./icons/Php.astro";
 import Svelte from "./icons/stack/Svelte.astro";
 import TypeScript from "./icons/stack/TypeScript.astro";
+import Laravel from "./icons/stack/Laravel.astro";
+import ReactJS from "./icons/stack/ReactJS.astro";
+import MySQL from "./icons/stack/MySQL.astro";
 
 type tLang = (str: any) => any;
 
@@ -32,7 +35,7 @@ const TAGS: TagsType = {
   },
   tailwindcss: {
     name: "Tailwind CSS",
-    class: "bg-[#06b6d4] text-white",
+    class: "bg-[#000] text-white dark:bg-white dark:text-[#000]",
     icon: Tailwind,
   },
   php: {
@@ -54,6 +57,21 @@ const TAGS: TagsType = {
     name: "TypeScript",
     class: "bg-[#000] text-white dark:bg-white dark:text-[#000]",
     icon: TypeScript,
+  },
+  laravel: {
+    name: "Laravel",
+    class: "bg-[#000] text-white dark:bg-white dark:text-[#000]",
+    icon: Laravel,
+  },
+  react: {
+    name: "React",
+    class: "bg-[#000] text-white dark:bg-white dark:text-[#000]",
+    icon: ReactJS,
+  },
+  mysql: {
+    name: "MySQL",
+    class: "bg-[#000] text-white dark:bg-white dark:text-[#000]",
+    icon: MySQL,
   },
 };
 

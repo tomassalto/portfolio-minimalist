@@ -1,3 +1,5 @@
+import GitHub from "@/components/icons/GitHub.astro";
+
 export const languages = {
   es: "ES",
   en: "US",
@@ -56,6 +58,22 @@ export const ui = {
         image: "/chatpdf.png",
         tags: ["astro", "svelte", "typescript"],
       },
+      {
+        title: "CursosApp",
+        description:
+          "CursosApp es una aplicacíon web en donde se simula la inscripción de cursos de programacíon. Es un Crud creado en Laravel y React.js, la base de datos está hecha con MySQL.",
+        github: "https://github.com/tomassalto/gestionCursos-laravel-react",
+        image: "/cursosapp.png",
+        tags: ["laravel", "react", "mysql"],
+      },
+      {
+        title: "Todo App",
+        description:
+          "Aplicación web de uso diario para crear tareas que tengo que completar durante el día, contiene un filtro para buscarlas dinámicamente.",
+        github: "https://github.com/tomassalto/pwa2024",
+        image: "/todoapp.png",
+        tags: ["react", "tailwindcss"],
+      },
     ],
   },
   en: {
@@ -95,7 +113,6 @@ export const ui = {
         title: "MusicTime - Ecommerce",
         description:
           "MusicTime is a web application built from scratch using PHP Vanilla. It features a shopping cart, state management, user login, and CRUD operations with a MySQL database.",
-        link: "https://svgl.vercel.app/",
         github: "https://github.com/tomassalto/TpFinalSalto",
         image: "/musictime.png",
         tags: ["php"],
@@ -108,6 +125,22 @@ export const ui = {
         github: "https://github.com/tomassalto/chatPDF",
         image: "/chatpdf.png",
         tags: ["astro", "svelte", "typescript"],
+      },
+      {
+        title: "CursosApp",
+        description:
+          "CursosApp is a web application that simulates course registration for programming. It’s a CRUD (Create, Read, Update, Delete) system created using Laravel and React.js, with a MySQL database.",
+        github: "https://github.com/tomassalto/gestionCursos-laravel-react",
+        image: "/cursosapp.png",
+        tags: ["laravel", "react", "mysql"],
+      },
+      {
+        title: "Todo App",
+        description:
+          "Daily-use web application for creating tasks that I need to complete during the day, with a dynamic search filter.",
+        github: "https://github.com/tomassalto/pwa2024",
+        image: "/todoapp.png",
+        tags: ["react", "tailwindcss"],
       },
     ],
   },
