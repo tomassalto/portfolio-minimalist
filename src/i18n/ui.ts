@@ -50,6 +50,15 @@ export const ui = {
         tags: ["php"],
       },
       {
+        title: "Spot - ify",
+        description:
+          "Spot - ify es una aplicación web creada desde cero utilizando Astro, Tailwind, Svelte y React. Ofrece transmisión de música, cambio de canciones, control de volumen y más.",
+        github: "https://github.com/tomassalto/spotify-clone",
+        link: "https://tomassalto-spotify-clone.netlify.app/",
+        image: "/spotify-clone.png",
+        tags: ["astro", "tailwind", "svelte", "react"],
+      },
+      {
         title: "Chat with your PDF",
         description:
           "Chat with Your PDF, está desarrollada utilizando Astro, TypeScript y Svelte. Los usuarios pueden cargar archivos PDF, y la inteligencia artificial integrada de OpenIA lee el contenido. Además, los usuarios pueden hacer preguntas relacionadas con el PDF, y la IA proporciona respuestas relevantes.",
@@ -116,6 +125,15 @@ export const ui = {
         github: "https://github.com/tomassalto/TpFinalSalto",
         image: "/musictime.png",
         tags: ["php"],
+      },
+      {
+        title: "Spot - ify",
+        description:
+          "Spot - ify is a web application created from scratch using Astro, Tailwind, Svelte, and React. It offers music streaming, song switching, volume control, and more.",
+        github: "https://github.com/tomassalto/spotify-clone",
+        link: "https://tomassalto-spotify-clone.netlify.app/",
+        image: "/spotify-clone.png",
+        tags: ["astro", "tailwind", "svelte", "react"],
       },
       {
         title: "Chat with your PDF",
