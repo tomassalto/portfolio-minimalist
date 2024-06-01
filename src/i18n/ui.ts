@@ -56,7 +56,7 @@ export const ui = {
         github: "https://github.com/tomassalto/spotify-clone",
         link: "https://tomassalto-spotify-clone.netlify.app/",
         image: "/spotify-clone.png",
-        tags: ["astro", "tailwind", "svelte", "react"],
+        tags: ["astro", "tailwindcss", "svelte", "react"],
       },
       {
         title: "Chat with your PDF",
