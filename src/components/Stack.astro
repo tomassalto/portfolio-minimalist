@@ -18,6 +18,7 @@ import TypeScriptIcon from "../components/icons/stack/TypeScript.astro";
 import VSCodeIcon from "../components/icons/stack/VSCode.astro";
 import Postman from "./icons/stack/Postman.astro";
 import DrupalIcon from "./icons/stack/Drupal.astro";
+import MongoDB from "./icons/stack/MongoDB.astro";
 
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 type tLang = (str: any) => any;
@@ -32,24 +33,25 @@ const SKL: Skill[] = t("skills");
 
 const MY_STACK = {
   frontend: [
+    { name: "Astro", icon: AstroIcon },
+    { name: "React", icon: ReactJSIcon },
+    { name: "TailwindCSS", icon: TailwindIcon },
+    { name: "Next.js", icon: NextJSIcon },
+    { name: "JavaScript", icon: JavaScriptIcon },
     { name: "HTML", icon: HtmlIcon },
     { name: "CSS", icon: CSSIcon },
-    { name: "JavaScript", icon: JavaScriptIcon },
-    { name: "ReactJS", icon: ReactJSIcon },
-    { name: "TailwindCSS", icon: TailwindIcon },
   ],
   backend: [
     { name: "PHP", icon: PHPIcon },
-    { name: "NodeJS", icon: NodeJSIcon },
     { name: "Laravel", icon: LaravelIcon },
-    { name: "ExpressJS", icon: ExpressIcon },
+    { name: "NodeJS", icon: NodeJSIcon },
     { name: "MySQL", icon: MySQLIcon },
-    { name: "Next.js", icon: NextJSIcon },
+    { name: "ExpressJS", icon: ExpressIcon },
   ],
   learning: [
-    { name: "Astro", icon: AstroIcon },
     { name: "TypeScript", icon: TypeScriptIcon },
     { name: "Drupal", icon: DrupalIcon },
+    { name: "MongoDB", icon: MongoDB },
   ],
   tools: [
     { name: "Git", icon: GitIcon },
