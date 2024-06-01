@@ -18,7 +18,7 @@ export const ui = {
     "hero.badge": "Disponible para trabajar",
     "hero.title": "Hola, soy Tomás",
     "hero.bio":
-      "Estudiante de la Tecnicatura Unviersitaria en Desarrollo Web. <strong>Desarrollador y Programador Web</strong> de <span class='text-sky-400'><strong> Neuquén, Argentina.</strong></span> Especializado en el desarrollo de aplicaciones web únicas.",
+      "Estudiante de la Tecnicatura Universitaria en Desarrollo Web. <strong>Desarrollador y Programador Web</strong> de <span class='text-sky-400'><strong> Neuquén, Argentina.</strong></span> Especializado en el desarrollo de aplicaciones web únicas.",
     "hero.mail": "Contáctame",
     "hero.linkedin": "LinkedIn",
     "exp.title": "Experiencia laboral",
@@ -27,7 +27,7 @@ export const ui = {
     "skills.tools": "Herramientas",
     "skills.learn": "Aprendiendo",
     "about.title": "Sobre mí",
-    "about.bio": `<p>Me llamo Tomás. Empecé en la programación de forma autodidacta en Youtube. Actualmente estoy <strong> en el ultimo año de mi Tecnicatura Universitaria</strong>.</p><p>Algunos de mis éxitos incluyen <strong>colaborar con ADUS/IPVU para el desarrollo de una App de gestión de viviendas en la Provincia de  <span class='text-sky-400'> Neuquén</span></strong>.</p><p>Como Desarrollador Web, he logrado desarrollar un E-commerce con PHP vanilla desde cero creando asi <strong> <em class="italic"> sistema de Login, compras y su respectivo carrito, cambio de estado de compras, integracion con Symfony Mailer y DomPDF para envio de mails y pdf con su respectivo comprobante.</em></strong> Aprendiendo asi las bases de la Prógramación sin la necesidad de Frameworks.</p>`,
+    "about.bio": `<p>Me llamo Tomás. Empecé en la programación de forma autodidacta en Youtube. Actualmente estoy <strong> en el ultimo año de mi Tecnicatura Universitaria</strong>.</p><p>Algunos de mis éxitos incluyen <strong>colaborar con ADUS/IPVU para el desarrollo de una App de gestión de viviendas en la Provincia de  <span class='text-sky-400'> Neuquén</span></strong>.</p><p>Como Desarrollador Web, he logrado desarrollar un E-commerce con PHP vanilla desde cero creando asi un <strong> <em class="italic"> sistema de Login, compras y su respectivo carrito, cambio de estado de compras, integracion con Symfony Mailer y DomPDF para envio de mails y pdf con su respectivo comprobante.</em></strong> Aprendiendo asi las bases de la Programación sin la necesidad de Frameworks.</p>`,
     "footer.rights": "Casi todos los derechos reservados",
     exp: [
       {
