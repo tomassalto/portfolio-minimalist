@@ -1,5 +1,3 @@
-import GitHub from "@/components/icons/GitHub.astro";
-
 export const languages = {
   es: "ES",
   en: "US",
@@ -53,8 +51,8 @@ export const ui = {
         title: "Spot - ify",
         description:
           "Spot - ify es una aplicación web creada desde cero utilizando Astro, Tailwind, Svelte y React. Ofrece transmisión de música, cambio de canciones, control de volumen y más.",
-        github: "https://github.com/tomassalto/spotify-clone",
         link: "https://tomassalto-spotify-clone.netlify.app/",
+        github: "https://github.com/tomassalto/spotify-clone",
         image: "/spotify-clone.png",
         tags: ["astro", "tailwindcss", "svelte", "react"],
       },
@@ -79,6 +77,7 @@ export const ui = {
         title: "Todo App",
         description:
           "Aplicación web de uso diario para crear tareas que tengo que completar durante el día, contiene un filtro para buscarlas dinámicamente.",
+        link: "tomassalto-todoapp.netlify.app",
         github: "https://github.com/tomassalto/pwa2024",
         image: "/todoapp.png",
         tags: ["react", "tailwindcss"],
@@ -156,6 +155,7 @@ export const ui = {
         title: "Todo App",
         description:
           "Daily-use web application for creating tasks that I need to complete during the day, with a dynamic search filter.",
+        link: "tomassalto-todoapp.netlify.app",
         github: "https://github.com/tomassalto/pwa2024",
         image: "/todoapp.png",
         tags: ["react", "tailwindcss"],
