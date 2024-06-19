@@ -13,7 +13,7 @@ export const ui = {
     "nav.home": "Experiencia",
     "nav.projects": "Proyectos",
     "nav.about": "Sobre mí",
-    "nav.skills": "Tecnologias",
+    "nav.skills": "Tecnologías",
     "nav.contact": "Contacto",
     "hero.badge": "Disponible para trabajar",
     "hero.title": "Hola, soy Tomás",
