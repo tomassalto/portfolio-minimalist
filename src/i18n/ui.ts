@@ -31,11 +31,18 @@ export const ui = {
     "footer.rights": "Casi todos los derechos reservados",
     exp: [
       {
-        title: "Programador PHP",
+        title: "Desarrollador Front-end",
+        date: "May 2024 - Presente",
+        company: "Neowyze",
+        description:
+          "En mi rol de desarrollador front-end, he creado páginas web desde cero en Astro, React y Tailwind. Por otro lado, también me dediqué al proceso de migrar existentes páginas web desde HTML, CSS, TypeScript y JavaScript a Astro y Tailwind para mejorar y optimizar la calidad de código. También me corresponde hacer las ediciones y cambios que pide al cliente y manejar mis actividades en Jira para mantener un proceso ordenado y eficiente.",
+      },
+      {
+        title: "Desarrollador PHP",
         date: "Sept 2022 - Dic 2022",
         company: "Eximo Software",
         description:
-          "Como programador PHP, mi enfoque principal era crear la parte front-end y back-end de las aplicaciones. En el front-end, diseñaba y desarrollaba formularios y páginas de usuario. Luego, en el back-end, me encargaba de conectar esos formularios con la lógica de negocio y la base de datos SQL para almacenar y recuperar datos de manera segura.",
+          "Como desarrollador PHP, mi enfoque principal era crear la parte front-end y back-end de las aplicaciones. En el front-end, diseñaba y desarrollaba formularios y páginas de usuario. Luego, en el back-end, me encargaba de conectar esos formularios con la lógica de negocio y la base de datos SQL para almacenar y recuperar datos de manera segura.",
       },
     ],
     projects: [
@@ -108,6 +115,13 @@ export const ui = {
     "about.bio": `<p>My name is Tomás. I started programming self-taught through Youtube. Currently, I am <strong>in the last year of my University Technical Degree</strong>.</p><p>Some of my achievements include <strong>collaborating with ADUS/IPVU for the development of a housing management App in the Province of <span class='text-sky-400'>Neuquén</span></strong>.</p><p>As a Web Developer, I have successfully developed an E-commerce with vanilla PHP from scratch, thus creating <strong><em class="italic">login system, shopping functionalities including cart, order status change, integration with Symfony Mailer and DomPDF for sending emails and PDFs with respective receipts.</em></strong> Thus learning the foundations of programming without the need for frameworks.</p>`,
     "footer.rights": "Almost all rights reserved",
     exp: [
+      {
+        title: "Front-end Developer",
+        date: "May 2024 - Present",
+        company: "Neowyze",
+        description:
+          "As a front-end developer, I handle various tasks, including creating web pages from scratch using Astro, React, and Tailwind. I also migrate existing pages from HTML, CSS, TypeScript, JavaScript, and React to Astro and Tailwind, aiming to improve and optimize the code. Additionally, I make changes and enhancements as requested by clients and organize my tasks in Jira to maintain an efficient and orderly workflow.",
+      },
       {
         title: "PHP Developer",
         date: "Sept 2022 - Dec 2022",

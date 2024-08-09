@@ -26,12 +26,12 @@ const THEMES = ["Light", "Dark", "System"];
   <div
     transition:persist
     id="themes-menu"
-    class="absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 dark:bg-X dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
+    class="absolute hidden scale-80 top-9 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 dark:bg-X dark:bg-[#bbbcc3]"
   >
     <ul>
       {
         THEMES.map((theme) => (
-          <li class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 dark:text-white rounded-sm dark:bg-gray-900/90">
+          <li class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm bg-[#ffffffb3] dark:bg-[#bbbcc3] dark:text-black">
             {theme}
           </li>
         ))
@@ -42,6 +42,7 @@ const THEMES = ["Light", "Dark", "System"];
 
 <style>
   #themes-menu.open {
+    display: inline;
     animation: scale-up-center 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     display: block !important;
   }
