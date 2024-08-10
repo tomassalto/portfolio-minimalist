@@ -35,7 +35,7 @@ export const ui = {
         date: "May 2024 - Presente",
         company: "Neowyze",
         description:
-          "En mi rol de desarrollador front-end, he creado páginas web desde cero en Astro, React y Tailwind. Por otro lado, también me dediqué al proceso de migrar existentes páginas web desde HTML, CSS, TypeScript y JavaScript a Astro y Tailwind para mejorar y optimizar la calidad de código. También me corresponde hacer las ediciones y cambios que pide al cliente y manejar mis actividades en Jira para mantener un proceso ordenado y eficiente.",
+          "En mi rol de desarrollador front-end, he creado páginas web desde cero en Astro, React y Tailwind. Por otro lado, también me dediqué al proceso de migrar existentes páginas web desde HTML, CSS, TypeScript y JavaScript a Astro y Tailwind para mejorar y optimizar la calidad de código. También me corresponde hacer los cambios que pide el cliente y manejar mis actividades en Jira para mantener un proceso ordenado y eficiente.",
       },
       {
         title: "Desarrollador PHP",
@@ -120,7 +120,7 @@ export const ui = {
         date: "May 2024 - Present",
         company: "Neowyze",
         description:
-          "As a front-end developer, I handle various tasks, including creating web pages from scratch using Astro, React, and Tailwind. I also migrate existing pages from HTML, CSS, TypeScript, JavaScript, and React to Astro and Tailwind, aiming to improve and optimize the code. Additionally, I make changes and enhancements as requested by clients and organize my tasks in Jira to maintain an efficient and orderly workflow.",
+          "As a front-end developer, I handle various tasks, including creating web pages from scratch using Astro, React, and Tailwind. I also migrate existing pages from HTML, CSS, TypeScript, JavaScript, and to Astro/React and Tailwind, aiming to improve and optimize the code. Additionally, I make changes and enhancements as requested by clients and organize my tasks in Jira to maintain an efficient and orderly workflow.",
       },
       {
         title: "PHP Developer",

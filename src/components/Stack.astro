@@ -21,6 +21,7 @@ import DrupalIcon from "./icons/stack/Drupal.astro";
 import MongoDB from "./icons/stack/MongoDB.astro";
 
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import Jira from "./icons/stack/Jira.astro";
 type tLang = (str: any) => any;
 const lang = getLangFromUrl(Astro.url);
 const t: tLang = useTranslations(lang);
@@ -56,6 +57,7 @@ const MY_STACK = {
   tools: [
     { name: "Git", icon: GitIcon },
     { name: "GitHub", icon: GitHubIcon },
+    { name: "Jira", icon: Jira },
     { name: "VSCode", icon: VSCodeIcon },
     { name: "Npm", icon: NpmIcon },
     { name: "Postman", icon: Postman },
@@ -156,11 +158,5 @@ const MY_STACK = {
         </ul>
       </div>
     </article>
-    <div class="md:hidden">
-      <!-- Aquí va la tarjeta en una sola columna -->
-    </div>
-    <div class="md:hidden">
-      <!-- Aquí va la tarjeta en una sola columna -->
-    </div>
   </div>
 </div>
