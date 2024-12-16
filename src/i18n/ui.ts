@@ -18,7 +18,7 @@ export const ui = {
     "hero.badge": "Disponible para trabajar",
     "hero.title": "Hola, soy Tomás",
     "hero.bio":
-      "Estudiante de la Tecnicatura Universitaria en Desarrollo Web. <strong>Desarrollador y Programador Web</strong> de <span class='text-sky-400'><strong> Neuquén, Argentina.</strong></span> Especializado en el desarrollo de aplicaciones web únicas.",
+      "Técnico en Desarrollo Web. <strong>Desarrollador y Programador Web</strong> de <span class='text-sky-400'><strong> Neuquén, Argentina.</strong></span> Especializado en el desarrollo de aplicaciones web únicas.",
     "hero.mail": "Contáctame",
     "hero.linkedin": "LinkedIn",
     "exp.title": "Experiencia laboral",
@@ -27,7 +27,7 @@ export const ui = {
     "skills.tools": "Herramientas",
     "skills.learn": "Aprendiendo",
     "about.title": "Sobre mí",
-    "about.bio": `<p>Me llamo Tomás. Empecé en la programación de forma autodidacta en Youtube. Actualmente estoy <strong> en el ultimo año de mi Tecnicatura Universitaria</strong>.</p><p>Algunos de mis éxitos incluyen <strong>colaborar con ADUS/IPVU para el desarrollo de una App de gestión de viviendas en la Provincia de  <span class='text-sky-400'> Neuquén</span></strong>.</p><p>Como Desarrollador Web, he logrado desarrollar un E-commerce con PHP vanilla desde cero creando asi un <strong> <em class="italic"> sistema de Login, compras y su respectivo carrito, cambio de estado de compras, integracion con Symfony Mailer y DomPDF para envio de mails y pdf con su respectivo comprobante.</em></strong> Aprendiendo asi las bases de la Programación sin la necesidad de Frameworks.</p>`,
+    "about.bio": `<p>Me llamo Tomás. Hace 4 años me adentré en el mundo de la programación de forma autodidacta en Youtube. Hoy soy <strong> Técnico en Desarrollo Web</strong> graduado en la  <span class='text-sky-400'> Universidad Nacional del Comahue, Argentina.</span></p><p>Algunos de mis éxitos incluyen <strong>colaborar con ADUS/IPVU para el desarrollo de una App de gestión de viviendas en la Provincia de  <span class='text-sky-400'> Neuquén</span></strong>.</p><p>Como Desarrollador Web, he logrado desarrollar un E-commerce con PHP vanilla desde cero creando asi un <strong> <em class="italic"> sistema de Login, compras y su respectivo carrito, cambio de estado de compras, integracion con Symfony Mailer y DomPDF para envio de mails y pdf con su respectivo comprobante.</em></strong> Aprendiendo asi las bases de la Programación sin la necesidad de Frameworks.</p>`,
     "footer.rights": "Casi todos los derechos reservados",
     exp: [
       {
@@ -52,7 +52,48 @@ export const ui = {
           "MusicTime es una aplicación web creada desde cero utilizando PHP Vanilla. Ofrece un carrito de compras, gestión de estados, inicio de sesión y operaciones CRUD con una base de datos MySQL.",
         github: "https://github.com/tomassalto/TpFinalSalto",
         image: "/musictime.png",
-        tags: ["php"],
+        tags: ["php", "mysql"],
+      },
+      {
+        title: "Tu Crédito Online",
+        description:
+          "Tu Crédito Online es un sitio web que ofrece opciones de préstamos para ayudar a los usuarios a cumplir sus necesidades financieras de manera eficiente y confiable.",
+        image: "/tucredito.png",
+        link: "https://tucredito-online.netlify.app",
+        github: "https://github.com/tomassalto/TuCredito-Online",
+        tags: ["astro", "react", "tailwindcss"],
+      },
+      {
+        title: "Code",
+        description:
+          "Code es una plataforma diseñada para la venta de placas decorativas para el hogar, con opciones de personalización y una interfaz amigable.",
+        link: "https://code-tomassalto.netlify.app/",
+        github: "https://github.com/tomassalto/code",
+        image: "/code.png",
+        tags: ["react", "nextjs", "tailwindcss"],
+      },
+      {
+        title: "Metalúrgica",
+        description:
+          "Metalúrgica es un sitio que proporciona servicios y detalles sobre fabricación de estructuras, soldaduras, reparaciones, pulido y acabado para proyectos industriales y particulares.",
+        image: "/metalurgica.png",
+        tags: ["astro", "react", "tailwindcss"],
+      },
+      {
+        title: "VioFit",
+        description:
+          "VioFit es un centro de rehabilitación y entrenamiento que ofrece información sobre servicios y reservas a través de una interfaz moderna y accesible.",
+        link: "https://viofit.netlify.app/",
+        github: "https://github.com/tomassalto/Viofit",
+        image: "/viofit.png",
+        tags: ["astro", "react", "tailwindcss"],
+      },
+      {
+        title: "Cars Drives",
+        description:
+          "Cars Drives es una plataforma dedicada a la venta y consulta de información detallada sobre automóviles, diseñada para facilitar la experiencia del usuario.",
+        image: "/bdc.png",
+        tags: ["astro", "react", "tailwindcss"],
       },
       {
         title: "Spot - ify",
@@ -137,7 +178,48 @@ export const ui = {
           "MusicTime is a web application built from scratch using PHP Vanilla. It features a shopping cart, state management, user login, and CRUD operations with a MySQL database.",
         github: "https://github.com/tomassalto/TpFinalSalto",
         image: "/musictime.png",
-        tags: ["php"],
+        tags: ["php", "mysql"],
+      },
+      {
+        title: "Tu Crédito Online",
+        description:
+          "Tu Crédito Online is a website offering loan options to help users meet their financial needs efficiently and reliably.",
+        link: "https://tucredito-online.netlify.app",
+        github: "https://github.com/tomassalto/TuCredito-Online",
+        image: "/tucredito.png",
+        tags: ["astro", "react", "tailwindcss"],
+      },
+      {
+        title: "Code",
+        description:
+          "Code is a platform designed for selling decorative plaques for homes, with customization options and a user-friendly interface.",
+        link: "https://code-tomassalto.netlify.app/",
+        github: "https://github.com/tomassalto/code",
+        image: "/code.png",
+        tags: ["react", "nextjs", "tailwindcss"],
+      },
+      {
+        title: "Metalúrgica",
+        description:
+          "Metalúrgica is a site providing services and details about the manufacturing of structures, welding, repairs, polishing, and finishing for industrial and private projects.",
+        image: "/metalurgica.png",
+        tags: ["astro", "react", "tailwindcss"],
+      },
+      {
+        title: "VioFit",
+        description:
+          "VioFit is a rehabilitation and training center offering information about services and reservations through a modern and accessible interface.",
+        link: "https://viofit.netlify.app/",
+        github: "https://github.com/tomassalto/viofit",
+        image: "/viofit.png",
+        tags: ["astro", "react", "tailwindcss"],
+      },
+      {
+        title: "Cars Drives",
+        description:
+          "Cars Drives is a platform dedicated to the sale and detailed consultation of automobiles, designed to enhance the user experience.",
+        image: "/bdc.png",
+        tags: ["astro", "react", "tailwindcss"],
       },
       {
         title: "Spot - ify",
