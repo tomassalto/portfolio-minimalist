@@ -26,10 +26,6 @@ type tLang = (str: any) => any;
 const lang = getLangFromUrl(Astro.url);
 const t: tLang = useTranslations(lang);
 
-type Skill = {
-  name: String;
-};
-
 const MY_STACK = {
   frontend: [
     { name: "Astro", icon: AstroIcon },
