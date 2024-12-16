@@ -47,6 +47,14 @@ export const ui = {
     ],
     projects: [
       {
+        title: "Psique-Connect",
+        description:
+          "Psique-Connect es una plataforma que conecta a pacientes con psicólogos de forma personalizada, permitiendo establecer preferencias para encontrar profesionales adecuados. Además, ofrece a los psicólogos herramientas para gestionar perfiles, consultas y horarios, asegurando opciones accesibles y adaptadas para todos.",
+        github: "https://github.com/tomassalto/psique-connect",
+        image: "/psique-connect.png",
+        tags: ["laravel", "react", "astro", "tailwindcss", "mysql"],
+      },
+      {
         title: "MusicTime - Tienda onlines de discos de música",
         description:
           "MusicTime es una aplicación web creada desde cero utilizando PHP Vanilla. Ofrece un carrito de compras, gestión de estados, inicio de sesión y operaciones CRUD con una base de datos MySQL.",
@@ -92,6 +100,7 @@ export const ui = {
         title: "Cars Drives",
         description:
           "Cars Drives es una plataforma dedicada a la venta y consulta de información detallada sobre automóviles, diseñada para facilitar la experiencia del usuario.",
+        github: "https://github.com/tomassalto/brothers-drive-cars",
         image: "/bdc.png",
         tags: ["astro", "react", "tailwindcss"],
       },
@@ -173,6 +182,14 @@ export const ui = {
     ],
     projects: [
       {
+        title: "Psique-Connect",
+        description:
+          "Psique-Connect is a platform that connects patients with psychologists through a personalized matching system. It allows users to set preferences to find the most suitable professionals while providing psychologists with tools to manage profiles, appointments, and schedules, ensuring accessible and tailored options for everyone.",
+        github: "https://github.com/tomassalto/psique-connect",
+        image: "/psique-connect.png",
+        tags: ["laravel", "react", "astro", "tailwindcss", "mysql"],
+      },
+      {
         title: "MusicTime - Ecommerce",
         description:
           "MusicTime is a web application built from scratch using PHP Vanilla. It features a shopping cart, state management, user login, and CRUD operations with a MySQL database.",
@@ -193,7 +210,7 @@ export const ui = {
         title: "Code",
         description:
           "Code is a platform designed for selling decorative plaques for homes, with customization options and a user-friendly interface.",
-        link: "https://code-tomassalto.netlify.app/",
+        link: "https://code-tomassalto.netlify.app",
         github: "https://github.com/tomassalto/code",
         image: "/code.png",
         tags: ["react", "nextjs", "tailwindcss"],
@@ -202,6 +219,8 @@ export const ui = {
         title: "Metalúrgica",
         description:
           "Metalúrgica is a site providing services and details about the manufacturing of structures, welding, repairs, polishing, and finishing for industrial and private projects.",
+        link: "https://code-tomassalto.netlify.app",
+        github: "https://github.com/tomassalto/code",
         image: "/metalurgica.png",
         tags: ["astro", "react", "tailwindcss"],
       },
@@ -218,6 +237,7 @@ export const ui = {
         title: "Cars Drives",
         description:
           "Cars Drives is a platform dedicated to the sale and detailed consultation of automobiles, designed to enhance the user experience.",
+        github: "https://github.com/tomassalto/brothers-drive-cars",
         image: "/bdc.png",
         tags: ["astro", "react", "tailwindcss"],
       },
