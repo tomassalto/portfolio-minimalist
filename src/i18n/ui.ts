@@ -67,16 +67,14 @@ export const ui = {
         description:
           "Tu Crédito Online es un sitio web que ofrece opciones de préstamos para ayudar a los usuarios a cumplir sus necesidades financieras de manera eficiente y confiable.",
         image: "/tucredito.png",
-        link: "https://tucredito-online.netlify.app",
-        github: "https://github.com/tomassalto/TuCredito-Online",
+
         tags: ["astro", "react", "tailwindcss"],
       },
       {
         title: "Code",
         description:
           "Code es una plataforma diseñada para la venta de placas decorativas para el hogar, con opciones de personalización y una interfaz amigable.",
-        link: "https://code-tomassalto.netlify.app/",
-        github: "https://github.com/tomassalto/code",
+
         image: "/code.png",
         tags: ["react", "nextjs", "tailwindcss"],
       },
@@ -91,8 +89,7 @@ export const ui = {
         title: "VioFit",
         description:
           "VioFit es un centro de rehabilitación y entrenamiento que ofrece información sobre servicios y reservas a través de una interfaz moderna y accesible.",
-        link: "https://viofit.netlify.app/",
-        github: "https://github.com/tomassalto/Viofit",
+
         image: "/viofit.png",
         tags: ["astro", "react", "tailwindcss"],
       },
@@ -100,7 +97,7 @@ export const ui = {
         title: "Cars Drives",
         description:
           "Cars Drives es una plataforma dedicada a la venta y consulta de información detallada sobre automóviles, diseñada para facilitar la experiencia del usuario.",
-        github: "https://github.com/tomassalto/brothers-drive-cars",
+
         image: "/bdc.png",
         tags: ["astro", "react", "tailwindcss"],
       },
@@ -201,8 +198,7 @@ export const ui = {
         title: "Tu Crédito Online",
         description:
           "Tu Crédito Online is a website offering loan options to help users meet their financial needs efficiently and reliably.",
-        link: "https://tucredito-online.netlify.app",
-        github: "https://github.com/tomassalto/TuCredito-Online",
+
         image: "/tucredito.png",
         tags: ["astro", "react", "tailwindcss"],
       },
@@ -210,8 +206,7 @@ export const ui = {
         title: "Code",
         description:
           "Code is a platform designed for selling decorative plaques for homes, with customization options and a user-friendly interface.",
-        link: "https://code-tomassalto.netlify.app",
-        github: "https://github.com/tomassalto/code",
+
         image: "/code.png",
         tags: ["react", "nextjs", "tailwindcss"],
       },
@@ -219,8 +214,7 @@ export const ui = {
         title: "Metalúrgica",
         description:
           "Metalúrgica is a site providing services and details about the manufacturing of structures, welding, repairs, polishing, and finishing for industrial and private projects.",
-        link: "https://code-tomassalto.netlify.app",
-        github: "https://github.com/tomassalto/code",
+
         image: "/metalurgica.png",
         tags: ["astro", "react", "tailwindcss"],
       },
@@ -228,8 +222,7 @@ export const ui = {
         title: "VioFit",
         description:
           "VioFit is a rehabilitation and training center offering information about services and reservations through a modern and accessible interface.",
-        link: "https://viofit.netlify.app/",
-        github: "https://github.com/tomassalto/viofit",
+
         image: "/viofit.png",
         tags: ["astro", "react", "tailwindcss"],
       },
@@ -237,7 +230,7 @@ export const ui = {
         title: "Cars Drives",
         description:
           "Cars Drives is a platform dedicated to the sale and detailed consultation of automobiles, designed to enhance the user experience.",
-        github: "https://github.com/tomassalto/brothers-drive-cars",
+
         image: "/bdc.png",
         tags: ["astro", "react", "tailwindcss"],
       },
