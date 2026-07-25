@@ -1,20 +1,26 @@
 ---
-import { languages } from '@/i18n/ui';
-import { getLangFromUrl, useTranslatedPath } from '@/i18n/utils';
+import { languages } from "@/i18n/ui";
+import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 ---
 
-<div class="flex flex-row gap-1 px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500">
+<div
+  class="inline-flex items-center gap-1 rounded-full border p-1 text-xs font-semibold"
+  style="border-color: var(--border); background: var(--surface-strong);"
+>
   {
-    Object.entries(languages).map(([langPrefix, label]) => {     
-      if (langPrefix == lang) return <></>
-      return (
-        <a
-         href={translatePath("/", langPrefix)}
-         class="hover:scale-125 transition"
-         >{label}</a>)
-    })
+    Object.entries(languages).map(([langPrefix, label]) => (
+      <a
+        href={translatePath("/", langPrefix)}
+        class:list={[
+          "rounded-full px-2 py-1 transition",
+          langPrefix === lang && "bg-black text-white dark:bg-white dark:text-black",
+        ]}
+      >
+        {label}
+      </a>
+    ))
   }
 </div>

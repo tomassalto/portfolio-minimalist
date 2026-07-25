@@ -4,7 +4,10 @@ const { class: className, id } = Astro.props;
 
 <section
   id={id}
-  class={`${className} w-full mx-auto lg:w-[740px] lg:pb-24 pb-10`}
+  class:list={[
+    "w-full scroll-mt-36 lg:scroll-mt-40",
+    className,
+  ]}
 >
   <slot />
 </section>

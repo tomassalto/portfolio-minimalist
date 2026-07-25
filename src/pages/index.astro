@@ -1,69 +1,52 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-
 import AboutMe from "@/components/AboutMe.astro";
-import Briefcase from "@/components/icons/Briefcase.astro";
-import CodeIcon from "@/components/icons/Code.astro";
 import Experience from "@/components/Experiencie.astro";
-import ProfileCheck from "@/components/icons/Profile.astro";
 import Projects from "@/components/Projects.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import Stack from "@/components/Stack.astro";
-import SkillsIcon from "@/components/icons/SkillsIcon.astro";
-
-type tLang = (str: any) => any;
 
 const lang = getLangFromUrl(Astro.url);
-const t: tLang = useTranslations(lang);
+const t = useTranslations(lang);
 ---
 
 <Layout title={t("layout.title")} description={t("layout.description")}>
-  <main class="px-4 w-full h-full">
-    <SectionContainer class="py-16 md:py-36">
+  <main class="page-main-stack">
+    <SectionContainer>
       <Hero />
     </SectionContainer>
 
-    <div class="space-y-24">
-      <SectionContainer id="experiencia">
-        <h2
-          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-        >
-          <Briefcase class="size-8" />
+    <SectionContainer id="experiencia">
+      <div class="section-heading-stack">
+        <h2 class="eyebrow section-title-eyebrow">
           {t("exp.title")}
         </h2>
-        <Experience />
-      </SectionContainer>
+      </div>
+      <Experience />
+    </SectionContainer>
 
-      <SectionContainer id="proyectos">
-        <h2
-          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-        >
-          <CodeIcon class="size-7" />
-          {t("projects.title")}
-        </h2>
-        <Projects />
-      </SectionContainer>
+    <SectionContainer>
+      <Projects />
+    </SectionContainer>
 
-      <SectionContainer id="sobre-mi">
-        <h2
-          class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
-        >
-          <ProfileCheck class="size-8" />
+    <SectionContainer id="sobre-mi">
+      <div class="section-heading-stack">
+        <h2 class="eyebrow section-title-eyebrow">
           {t("about.title")}
         </h2>
-        <AboutMe />
-      </SectionContainer>
-      <SectionContainer id="tecnologias">
-        <h2
-          class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
-        >
-          <SkillsIcon class="size-8" />
+      </div>
+      <AboutMe />
+    </SectionContainer>
+
+    <SectionContainer id="tecnologias">
+      <div class="section-heading-stack">
+        <h2 class="eyebrow section-title-eyebrow">
           {t("skills.title")}
         </h2>
-        <Stack />
-      </SectionContainer>
-    </div>
+      </div>
+      <Stack />
+    </SectionContainer>
   </main>
 </Layout>

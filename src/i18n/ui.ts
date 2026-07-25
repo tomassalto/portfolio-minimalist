@@ -1,273 +1,148 @@
 export const languages = {
   es: "ES",
-  en: "US",
-};
+  en: "EN",
+} as const;
 
 export const defaultLang = "es";
 
+export type Language = keyof typeof languages;
+
 export const ui = {
   es: {
-    "layout.title": "Porfolio de Tomás Salto - Desarrollador y Programador Web",
+    "layout.title": "Tomás Salto | Portfolio de Desarrollador Web",
     "layout.description":
-      "Contratá a Tomás para crear tu aplicación web o móvil. Desarrollador Web. Especializado en crear aplicaciones únicas.",
-    "nav.home": "Experiencia",
-    "nav.projects": "Proyectos",
+      "Portfolio profesional de Tomás Salto, desarrollador Front-end, PHP/Laravel y Full Stack con proyectos reales, foco en producto y experiencia construyendo aplicaciones web.",
+    "nav.experience": "Experiencia",
+    "nav.featured": "Destacados",
+    "nav.projects": "Repositorios",
     "nav.about": "Sobre mí",
-    "nav.skills": "Tecnologías",
+    "nav.skills": "Stack",
     "nav.contact": "Contacto",
-    "hero.badge": "Disponible para trabajar",
-    "hero.title": "Hola, soy Tomás",
-    "hero.bio":
-      "Técnico en Desarrollo Web. <strong>Desarrollador y Programador Web</strong> de <span class='text-sky-400'><strong> Neuquén, Argentina.</strong></span> Especializado en el desarrollo de aplicaciones web únicas.",
-    "hero.mail": "Contáctame",
+    "nav.cv": "Descargar CV",
+    "theme.toggle": "Cambiar tema",
+    "hero.badge": "Disponible para entrevistas",
+    "hero.kicker": "Portfolio profesional",
+    "hero.title": "Desarrollador web orientado a producto, performance y ejecución.",
+    "hero.summary":
+      "Construyo interfaces claras, herramientas internas y aplicaciones full stack con Astro, React, PHP, Laravel, MySQL y APIs, con foco en mantenibilidad y entrega real.",
+    "hero.location": "Neuquén, Argentina",
+    "hero.primary": "Ver proyectos destacados",
+    "hero.secondary": "Descargar CV",
+    "hero.email": "Email",
+    "hero.github": "GitHub",
     "hero.linkedin": "LinkedIn",
-    "exp.title": "Experiencia laboral",
-    "projects.title": "Proyectos",
-    "skills.title": "Tecnologias",
-    "skills.tools": "Herramientas",
-    "skills.learn": "Aprendiendo",
+    "hero.metricYears": "4+ años programando de forma activa",
+    "hero.metricProjects": "Proyectos reales con deploy y código público",
+    "hero.metricRoles": "Perfil Front-end, PHP/Laravel y Full Stack",
+    "featured.title": "Proyectos destacados",
+    "featured.copy":
+      "Selección curada para mostrar mejor criterio técnico, producto y amplitud de stack.",
+    "projects.title": "Repositorios recientes",
+    "projects.copy":
+      "Integración build-time con GitHub para mantener el portfolio actualizado sin carga manual repositorio por repositorio.",
+    "projects.filterAll": "Todos",
+    "projects.updated": "Última actualización",
+    "projects.updatedUnavailable": "No disponible",
+    "projects.summary": "Resumen",
+    "projects.stack": "Tecnologías",
+    "projects.whatItShows": "Qué demuestra",
+    "projects.empty": "No hay proyectos para ese filtro todavía.",
+    "projects.code": "GitHub",
+    "projects.deploy": "Deploy",
+    "projects.featuredBadge": "Destacado",
+    "projects.viewAll": "Ver todos los proyectos en GitHub",
+    "exp.title": "Experiencia profesional",
     "about.title": "Sobre mí",
-    "about.bio": `<p>Me llamo Tomás. Hace 4 años me adentré en el mundo de la programación de forma autodidacta en Youtube. Hoy soy <strong> Técnico en Desarrollo Web</strong> graduado en la  <span class='text-sky-400'> Universidad Nacional del Comahue, Argentina.</span></p><p>Algunos de mis éxitos incluyen <strong>colaborar con ADUS/IPVU para el desarrollo de una App de gestión de viviendas en la Provincia de  <span class='text-sky-400'> Neuquén</span></strong>.</p><p>Como Desarrollador Web, he logrado desarrollar un E-commerce con PHP vanilla desde cero creando asi un <strong> <em class="italic"> sistema de Login, compras y su respectivo carrito, cambio de estado de compras, integracion con Symfony Mailer y DomPDF para envio de mails y pdf con su respectivo comprobante.</em></strong> Aprendiendo asi las bases de la Programación sin la necesidad de Frameworks.</p>`,
-    "footer.rights": "Casi todos los derechos reservados",
+    "about.copy":
+      "<p>Soy técnico en desarrollo web y llevo varios años construyendo proyectos propios, sitios para clientes y aplicaciones con lógica real de negocio. Mi foco no está en acumular tecnologías, sino en resolver problemas con una base sólida de frontend, backend y despliegue.</p><p>Tuve experiencia profesional creando interfaces en Astro, React y Tailwind, migrando sitios existentes y aplicando cambios de cliente con criterio de mantenimiento. También trabajé con PHP y SQL para conectar formularios, lógica de negocio y persistencia.</p><p>Hoy busco oportunidades donde pueda aportar velocidad, criterio y capacidad de ejecución como Front-end, PHP/Laravel o Full Stack Developer.</p>",
+    "skills.title": "Stack y herramientas",
+    "skills.tools": "Herramientas",
+    "skills.learn": "Actualmente profundizando",
+    "footer.copy":
+      "Portfolio generado con Astro, Tailwind y datos de GitHub en build time.",
     exp: [
       {
         title: "Desarrollador Front-end",
-        date: "May 2024 - Oct 2024",
+        date: "Mayo 2024 - Octubre 2024",
         company: "Neowyze",
         description:
-          "En mi rol de desarrollador front-end, he creado páginas web desde cero en Astro, React y Tailwind. Por otro lado, también me dediqué al proceso de migrar existentes páginas web desde HTML, CSS, TypeScript y JavaScript a Astro y Tailwind para mejorar y optimizar la calidad de código. También me corresponde hacer los cambios que pide el cliente y manejar mis actividades en Jira para mantener un proceso ordenado y eficiente.",
+          "Desarrollo de sitios y landings en Astro, React y Tailwind; migración de páginas existentes desde HTML, CSS y JavaScript; mantenimiento orientado a calidad de código, performance y requerimientos de cliente.",
       },
       {
         title: "Desarrollador PHP",
-        date: "Sept 2022 - Dic 2022",
+        date: "Septiembre 2022 - Diciembre 2022",
         company: "Eximo Software",
         description:
-          "Como desarrollador PHP, mi enfoque principal era crear la parte front-end y back-end de las aplicaciones. En el front-end, diseñaba y desarrollaba formularios y páginas de usuario. Luego, en el back-end, me encargaba de conectar esos formularios con la lógica de negocio y la base de datos SQL para almacenar y recuperar datos de manera segura.",
-      },
-    ],
-    projects: [
-      {
-        title: "Psique-Connect",
-        description:
-          "Psique-Connect es una plataforma que conecta a pacientes con psicólogos de forma personalizada, permitiendo establecer preferencias para encontrar profesionales adecuados. Además, ofrece a los psicólogos herramientas para gestionar perfiles, consultas y horarios, asegurando opciones accesibles y adaptadas para todos.",
-        github: "https://github.com/tomassalto/psique-connect",
-        image: "/psique-connect.png",
-        tags: ["laravel", "react", "astro", "tailwindcss", "mysql"],
-      },
-      {
-        title: "MusicTime - Tienda onlines de discos de música",
-        description:
-          "MusicTime es una aplicación web creada desde cero utilizando PHP Vanilla. Ofrece un carrito de compras, gestión de estados, inicio de sesión y operaciones CRUD con una base de datos MySQL.",
-        github: "https://github.com/tomassalto/TpFinalSalto",
-        image: "/musictime.png",
-        tags: ["php", "mysql"],
-      },
-      {
-        title: "Tu Crédito Online",
-        description:
-          "Tu Crédito Online es un sitio web que ofrece opciones de préstamos para ayudar a los usuarios a cumplir sus necesidades financieras de manera eficiente y confiable.",
-        image: "/tucredito.png",
-
-        tags: ["astro", "react", "tailwindcss"],
-      },
-      {
-        title: "Code",
-        description:
-          "Code es una plataforma diseñada para la venta de placas decorativas para el hogar, con opciones de personalización y una interfaz amigable.",
-
-        image: "/code.png",
-        tags: ["react", "nextjs", "tailwindcss"],
-      },
-      {
-        title: "Metalúrgica",
-        description:
-          "Metalúrgica es un sitio que proporciona servicios y detalles sobre fabricación de estructuras, soldaduras, reparaciones, pulido y acabado para proyectos industriales y particulares.",
-        image: "/metalurgica.png",
-        tags: ["astro", "react", "tailwindcss"],
-      },
-      {
-        title: "VioFit",
-        description:
-          "VioFit es un centro de rehabilitación y entrenamiento que ofrece información sobre servicios y reservas a través de una interfaz moderna y accesible.",
-
-        image: "/viofit.png",
-        tags: ["astro", "react", "tailwindcss"],
-      },
-      {
-        title: "Cars Drives",
-        description:
-          "Cars Drives es una plataforma dedicada a la venta y consulta de información detallada sobre automóviles, diseñada para facilitar la experiencia del usuario.",
-
-        image: "/bdc.png",
-        tags: ["astro", "react", "tailwindcss"],
-      },
-      {
-        title: "Spot - ify",
-        description:
-          "Spot - ify es una aplicación web creada desde cero utilizando Astro, Tailwind, Svelte y React. Ofrece transmisión de música, cambio de canciones, control de volumen y más.",
-        link: "https://tomassalto-spotify-clone.netlify.app/",
-        github: "https://github.com/tomassalto/spotify-clone",
-        image: "/spotify-clone.png",
-        tags: ["astro", "tailwindcss", "svelte", "react"],
-      },
-      {
-        title: "Chat with your PDF",
-        description:
-          "Chat with Your PDF, está desarrollada utilizando Astro, TypeScript y Svelte. Los usuarios pueden cargar archivos PDF, y la inteligencia artificial integrada de OpenIA lee el contenido. Además, los usuarios pueden hacer preguntas relacionadas con el PDF, y la IA proporciona respuestas relevantes.",
-        link: "https://chatpdf-tomassalto.netlify.app/",
-        github: "https://github.com/tomassalto/chatPDF",
-        image: "/chatpdf.png",
-        tags: ["astro", "svelte", "typescript"],
-      },
-      {
-        title: "CursosApp",
-        description:
-          "CursosApp es una aplicacíon web en donde se simula la inscripción de cursos de programacíon. Es un Crud creado en Laravel y React.js, la base de datos está hecha con MySQL.",
-        github: "https://github.com/tomassalto/gestionCursos-laravel-react",
-        image: "/cursosapp.png",
-        tags: ["laravel", "react", "mysql"],
-      },
-      {
-        title: "Todo App",
-        description:
-          "Aplicación web de uso diario para crear tareas que tengo que completar durante el día, contiene un filtro para buscarlas dinámicamente.",
-        link: "tomassalto-todoapp.netlify.app",
-        github: "https://github.com/tomassalto/pwa2024",
-        image: "/todoapp.png",
-        tags: ["react", "tailwindcss"],
+          "Implementación de formularios, vistas y conexiones con lógica de negocio y base de datos SQL. Trabajo sobre frontend y backend con foco en flujos administrativos y persistencia segura.",
       },
     ],
   },
   en: {
-    "layout.title": `Tomás's Portfolio - Web Developer and Programmer`,
+    "layout.title": "Tomás Salto | Web Developer Portfolio",
     "layout.description":
-      "Hire Tomás to build your web or mobile application. Web Developer. Specialized in creating unique applications.",
-    "nav.home": "Experience",
-    "nav.projects": "Projects",
-    "nav.about": "About me",
-    "nav.skills": "Skills",
+      "Professional portfolio of Tomás Salto, a Front-end, PHP/Laravel, and Full Stack developer with real projects, product focus, and hands-on experience building web applications.",
+    "nav.experience": "Experience",
+    "nav.featured": "Featured",
+    "nav.projects": "Repositories",
+    "nav.about": "About",
+    "nav.skills": "Stack",
     "nav.contact": "Contact",
+    "nav.cv": "Download CV",
+    "theme.toggle": "Toggle theme",
     "hero.badge": "Open to work",
-    "hero.title": `Hey, I'm Tomás`,
-    "hero.bio":
-      "Student of the University Technical Degree in Web Development. <strong>Web Developer and Programmer</strong> from <span class='text-sky-400'><strong>Neuquén, Argentina.</strong></span> Specialized in the development of unique web applications.",
-    "hero.mail": "Contact me",
+    "hero.kicker": "Professional portfolio",
+    "hero.title": "Web developer focused on product, performance, and practical delivery.",
+    "hero.summary":
+      "I build clear interfaces, internal tools, and maintainable full-stack applications with Astro, React, PHP, Laravel, MySQL, and APIs.",
+    "hero.location": "Neuquén, Argentina",
+    "hero.primary": "See featured projects",
+    "hero.secondary": "Download CV",
+    "hero.email": "Email",
+    "hero.github": "GitHub",
     "hero.linkedin": "LinkedIn",
-    "exp.title": "Professional Experience",
-    "projects.title": "Projects",
-    "skills.title": "Skills",
-    "skills.learn": "Learning",
-    "skills.tools": "Tools",
+    "hero.metricYears": "4+ years coding consistently",
+    "hero.metricProjects": "Real projects with deploys and public code",
+    "hero.metricRoles": "Front-end, PHP/Laravel, and Full Stack profile",
+    "featured.title": "Featured projects",
+    "featured.copy":
+      "A curated selection that best represents technical range, product thinking, and stack breadth.",
+    "projects.title": "Recent repositories",
+    "projects.copy":
+      "Build-time GitHub integration keeps the portfolio updated without manually editing every repository card.",
+    "projects.filterAll": "All",
+    "projects.updated": "Last updated",
+    "projects.updatedUnavailable": "Unavailable",
+    "projects.summary": "Summary",
+    "projects.stack": "Technologies",
+    "projects.whatItShows": "What it shows",
+    "projects.empty": "There are no projects for that filter yet.",
+    "projects.code": "GitHub",
+    "projects.deploy": "Deploy",
+    "projects.featuredBadge": "Featured",
+    "projects.viewAll": "View all projects on GitHub",
+    "exp.title": "Professional experience",
     "about.title": "About me",
-    "about.bio": `<p>My name is Tomás. I started programming self-taught through Youtube. Currently, I am <strong>in the last year of my University Technical Degree</strong>.</p><p>Some of my achievements include <strong>collaborating with ADUS/IPVU for the development of a housing management App in the Province of <span class='text-sky-400'>Neuquén</span></strong>.</p><p>As a Web Developer, I have successfully developed an E-commerce with vanilla PHP from scratch, thus creating <strong><em class="italic">login system, shopping functionalities including cart, order status change, integration with Symfony Mailer and DomPDF for sending emails and PDFs with respective receipts.</em></strong> Thus learning the foundations of programming without the need for frameworks.</p>`,
-    "footer.rights": "Almost all rights reserved",
+    "about.copy":
+      "<p>I am a web development graduate who has spent the last several years building personal products, client-facing sites, and applications with real business logic. My goal is not to collect technologies, but to solve problems with a solid frontend, backend, and deployment foundation.</p><p>I gained professional experience building interfaces with Astro, React, and Tailwind, migrating legacy pages, and shipping client-requested changes with maintainability in mind. I also worked with PHP and SQL to connect forms, business logic, and persistence.</p><p>I am currently looking for roles where I can contribute speed, judgment, and execution as a Front-end, PHP/Laravel, or Full Stack Developer.</p>",
+    "skills.title": "Stack and tools",
+    "skills.tools": "Tools",
+    "skills.learn": "Currently deepening",
+    "footer.copy":
+      "Portfolio powered by Astro, Tailwind, and build-time GitHub data.",
     exp: [
       {
         title: "Front-end Developer",
-        date: "May 2024 - Oct 2024",
+        date: "May 2024 - October 2024",
         company: "Neowyze",
         description:
-          "As a front-end developer, I handle various tasks, including creating web pages from scratch using Astro, React, and Tailwind. I also migrate existing pages from HTML, CSS, TypeScript, JavaScript, and to Astro/React and Tailwind, aiming to improve and optimize the code. Additionally, I make changes and enhancements as requested by clients and organize my tasks in Jira to maintain an efficient and orderly workflow.",
+          "Built websites and landing pages with Astro, React, and Tailwind; migrated existing pages from HTML, CSS, and JavaScript; and handled client changes with a focus on code quality, performance, and maintainability.",
       },
       {
         title: "PHP Developer",
-        date: "Sept 2022 - Dec 2022",
+        date: "September 2022 - December 2022",
         company: "Eximo Software",
         description:
-          "As a PHP programmer, my primary responsibilities included creating both the front-end and back-end of applications. On the front-end, I designed and developed user-friendly forms and pages. Subsequently, on the back-end, I connected these forms to business logic and an SQL database for secure data storage and retrieval.",
-      },
-    ],
-    projects: [
-      {
-        title: "Psique-Connect",
-        description:
-          "Psique-Connect is a platform that connects patients with psychologists through a personalized matching system. It allows users to set preferences to find the most suitable professionals while providing psychologists with tools to manage profiles, appointments, and schedules, ensuring accessible and tailored options for everyone.",
-        github: "https://github.com/tomassalto/psique-connect",
-        image: "/psique-connect.png",
-        tags: ["laravel", "react", "astro", "tailwindcss", "mysql"],
-      },
-      {
-        title: "MusicTime - Ecommerce",
-        description:
-          "MusicTime is a web application built from scratch using PHP Vanilla. It features a shopping cart, state management, user login, and CRUD operations with a MySQL database.",
-        github: "https://github.com/tomassalto/TpFinalSalto",
-        image: "/musictime.png",
-        tags: ["php", "mysql"],
-      },
-      {
-        title: "Tu Crédito Online",
-        description:
-          "Tu Crédito Online is a website offering loan options to help users meet their financial needs efficiently and reliably.",
-
-        image: "/tucredito.png",
-        tags: ["astro", "react", "tailwindcss"],
-      },
-      {
-        title: "Code",
-        description:
-          "Code is a platform designed for selling decorative plaques for homes, with customization options and a user-friendly interface.",
-
-        image: "/code.png",
-        tags: ["react", "nextjs", "tailwindcss"],
-      },
-      {
-        title: "Metalúrgica",
-        description:
-          "Metalúrgica is a site providing services and details about the manufacturing of structures, welding, repairs, polishing, and finishing for industrial and private projects.",
-
-        image: "/metalurgica.png",
-        tags: ["astro", "react", "tailwindcss"],
-      },
-      {
-        title: "VioFit",
-        description:
-          "VioFit is a rehabilitation and training center offering information about services and reservations through a modern and accessible interface.",
-
-        image: "/viofit.png",
-        tags: ["astro", "react", "tailwindcss"],
-      },
-      {
-        title: "Cars Drives",
-        description:
-          "Cars Drives is a platform dedicated to the sale and detailed consultation of automobiles, designed to enhance the user experience.",
-
-        image: "/bdc.png",
-        tags: ["astro", "react", "tailwindcss"],
-      },
-      {
-        title: "Spot - ify",
-        description:
-          "Spot - ify is a web application created from scratch using Astro, Tailwind, Svelte, and React. It offers music streaming, song switching, volume control, and more.",
-        github: "https://github.com/tomassalto/spotify-clone",
-        link: "https://tomassalto-spotify-clone.netlify.app/",
-        image: "/spotify-clone.png",
-        tags: ["astro", "tailwind", "svelte", "react"],
-      },
-      {
-        title: "Chat with your PDF",
-        description:
-          "Chat with Your PDF, is built using Astro, TypeScript, and Svelte. Users can upload PDF files, and the integrated OpenIA artificial intelligence reads the content. Additionally, users can ask questions related to the PDF, and the AI provides relevant answers.",
-        link: "https://chatpdf-tomassalto.netlify.app/",
-        github: "https://github.com/tomassalto/chatPDF",
-        image: "/chatpdf.png",
-        tags: ["astro", "svelte", "typescript"],
-      },
-      {
-        title: "CursosApp",
-        description:
-          "CursosApp is a web application that simulates course registration for programming. It’s a CRUD (Create, Read, Update, Delete) system created using Laravel and React.js, with a MySQL database.",
-        github: "https://github.com/tomassalto/gestionCursos-laravel-react",
-        image: "/cursosapp.png",
-        tags: ["laravel", "react", "mysql"],
-      },
-      {
-        title: "Todo App",
-        description:
-          "Daily-use web application for creating tasks that I need to complete during the day, with a dynamic search filter.",
-        link: "tomassalto-todoapp.netlify.app",
-        github: "https://github.com/tomassalto/pwa2024",
-        image: "/todoapp.png",
-        tags: ["react", "tailwindcss"],
+          "Implemented forms, views, and connections between business logic and SQL databases. Worked across frontend and backend with a focus on admin workflows and secure persistence.",
       },
     ],
   },

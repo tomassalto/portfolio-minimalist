@@ -1,24 +1,35 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const personalImageAlt = "Tomás Salto";
+const highlights =
+  lang === "en"
+    ? [
+        "Front-end focused on user experience and performance.",
+        "PHP/Laravel backend with business logic and persistence.",
+        "Experience integrating APIs, deployments, and continuous maintenance.",
+      ]
+    : [
+        "Front-end con foco en experiencia de usuario y performance.",
+        "Backend en PHP/Laravel con lógica de negocio y persistencia.",
+        "Experiencia integrando APIs, despliegues y mantenimiento continuo.",
+      ];
 ---
 
-<article
-  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
->
-  <div
-    class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
-    set:html={t("about.bio")}
-  />
-
-  <img
-    width="200"
-    height="200"
-    src="/icon.jpg"
-    alt={personalImageAlt}
-    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
-    style="object-position: 50% 50%"
-  />
+<article class="about-shell">
+  <div class="section-shell rounded-[2rem] p-6 md:p-8">
+    <div
+      class="about-copy-text max-w-none"
+      set:html={t("about.copy")}
+    />
+  </div>
+  <div class="section-shell rounded-[2rem] p-6">
+    <h3 class="about-side-title-text mb-4">
+      {lang === "en" ? "How I work" : "Cómo trabajo"}
+    </h3>
+    <div class="about-highlight-text space-y-3 muted">
+      {highlights.map((highlight) => <p>{highlight}</p>)}
+    </div>
+  </div>
 </article>

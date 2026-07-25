@@ -1,56 +1,65 @@
 ---
-const personalImageAlt = "Tomás Salto";
 import Badge from "@/components/Badge.astro";
 import LinkedInIcon from "@/components/icons/LinkedIn.astro";
 import MailIcon from "@/components/icons/Mail.astro";
 import SocialPill from "@/components/SocialPill.astro";
 import GitHubIcon from "@/components/icons/GitHub.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import { siteConfig } from "@/config/site";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const cvPath = siteConfig.cvPath[lang];
 ---
 
-<div class="max-w-xl p-4">
-  <div
-    class="flex flex-col mb-6 gap-6 items-center xsm:flex-row xsm:gap-4 xsm:mb-4"
-  >
-    <img
-      class="rounded-full shadow-lg size-44"
-      src="/bolson.jpg"
-      alt={personalImageAlt}
-    />
-    <a
-      href="https://www.linkedin.com/in/tomas-agustin-salto-2585b6170/"
-      target="_blank"
-      rel="noopener"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
-    >
+<div class="hero-shell">
+  <div class="hero-body-stack">
+    <p class="eyebrow hero-kicker-text">
+      {t("hero.kicker")}
+    </p>
+    <div class="flex items-center gap-3">
       <Badge>{t("hero.badge")}</Badge>
-    </a>
+      <span class="muted hero-location-text">{t("hero.location")}</span>
+    </div>
+    <h1 class="hero-title-text max-w-4xl">
+      {t("hero.title")}
+    </h1>
+    <p class="hero-summary-text muted max-w-3xl">
+      {t("hero.summary")}
+    </p>
+    <div class="hero-cta-stack">
+      <LinkButton href={lang === "en" ? "/en#destacados" : "/#destacados"}>
+        {t("hero.primary")}
+      </LinkButton>
+      <LinkButton href={cvPath}>
+        {t("hero.secondary")}
+      </LinkButton>
+    </div>
+    <nav class="hero-social-stack">
+      <SocialPill href={`mailto:${siteConfig.email}`}>
+        <MailIcon class="size-4" />
+        {t("hero.email")}
+      </SocialPill>
+      <SocialPill href={siteConfig.linkedinUrl}>
+        <LinkedInIcon class="size-4" />
+        {t("hero.linkedin")}
+      </SocialPill>
+      <SocialPill href={siteConfig.githubUrl}>
+        <GitHubIcon class="size-4" />
+        {t("hero.github")}
+      </SocialPill>
+    </nav>
+    <div class="hero-metrics-grid">
+      <div class="section-shell rounded-3xl p-4">
+        <p class="hero-metric-text">{t("hero.metricYears")}</p>
+      </div>
+      <div class="section-shell rounded-3xl p-4">
+        <p class="hero-metric-text">{t("hero.metricProjects")}</p>
+      </div>
+      <div class="section-shell rounded-3xl p-4">
+        <p class="hero-metric-text">{t("hero.metricRoles")}</p>
+      </div>
+    </div>
   </div>
-  <h1
-    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
-  >
-    {t("hero.title")}
-  </h1>
-  <p
-    set:html={t("hero.bio")}
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
-  />
-  <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="mailto:tomasagustinsalto@gmail.com">
-      <MailIcon class="size-4" />
-      {t("hero.mail")}
-    </SocialPill>
-    <SocialPill
-      href="https://www.linkedin.com/in/tomas-agustin-salto-2585b6170/"
-    >
-      <LinkedInIcon class="size-4" />
-      {t("hero.linkedin")}
-    </SocialPill>
-    <SocialPill href="https://github.com/tomassalto">
-      <GitHubIcon class="size-4" />
-      Github
-    </SocialPill>
-  </nav>
 </div>

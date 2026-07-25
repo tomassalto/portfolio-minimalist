@@ -1,123 +1,113 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
 import LanguagePicker from "./LanguagePicker.astro";
-
+import LinkButton from "./LinkButton.astro";
+import { siteConfig } from "@/config/site";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
-type tLang = (str: any) => any;
-
 const lang = getLangFromUrl(Astro.url);
-const t: tLang = useTranslations(lang);
-
+const t = useTranslations(lang);
 const { currentLocale } = Astro;
+const cvPath = siteConfig.cvPath[lang];
 
 const navItems = [
   {
-    title: t("nav.home"),
-    label: "experiencia",
+    title: t("nav.experience"),
+    section: "experiencia",
     url: currentLocale === "en" ? "/en#experiencia" : "/#experiencia",
   },
   {
+    title: t("nav.featured"),
+    section: "destacados",
+    url: currentLocale === "en" ? "/en#destacados" : "/#destacados",
+  },
+  {
     title: t("nav.projects"),
-    label: "proyectos",
+    section: "proyectos",
     url: currentLocale === "en" ? "/en#proyectos" : "/#proyectos",
   },
   {
     title: t("nav.about"),
-    label: "sobre-mi",
+    section: "sobre-mi",
     url: currentLocale === "en" ? "/en#sobre-mi" : "/#sobre-mi",
   },
   {
     title: t("nav.skills"),
-    label: "tecnologias",
+    section: "tecnologias",
     url: currentLocale === "en" ? "/en#tecnologias" : "/#tecnologias",
   },
 ];
 ---
 
-<header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
->
+<header class="sticky top-0 z-20 mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
   <nav
-    class="flex flex-wrap xsm:flex-row mdx:text-xl px-3 xsm:text-xs sm:text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center mb-4"
+    aria-label="Primary"
+    class="section-shell flex flex-wrap items-center justify-between gap-3 rounded-[1.75rem] px-4 py-3"
   >
-    {
-      navItems.map((link) => (
-        <a
-          class="relative text-sm xsm:text-base sm:text-center block px-2 py-1 xsm:py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
-          aria-label={link.label}
-          href={link.url}
-        >
-          {link.title}
-        </a>
-      ))
-    }
-    <ThemeToggle />
-    <LanguagePicker />
+    <a href={currentLocale === "en" ? "/en/" : "/"} class="header-brand-text">
+      {siteConfig.name}
+    </a>
+    <div class="flex flex-wrap items-center gap-1 md:gap-3">
+      {
+        navItems.map((link) => (
+          <a
+            class="header-nav-text rounded-full px-3 py-2 transition hover:bg-black/5 hover:text-[var(--accent-strong)] dark:hover:bg-white/5"
+            data-section={link.section}
+            href={link.url}
+          >
+            {link.title}
+          </a>
+        ))
+      }
+    </div>
+    <div class="flex items-center gap-2">
+      <div class="hidden md:block">
+        <LinkButton href={cvPath}>{t("nav.cv")}</LinkButton>
+      </div>
+      <ThemeToggle />
+      <LanguagePicker />
+    </div>
   </nav>
 </header>
 
-<script>
-  document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section");
-    const navItems = document.querySelectorAll("header nav a");
+<script is:inline>
+  (() => {
+    const runScrollSpy = () => {
+      const sections = document.querySelectorAll("section[id]");
+      const navItems = document.querySelectorAll("header nav a[data-section]");
 
-    const callback = (entries: any[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-
-          navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") === id) {
-              item.classList.add("!text-blue-500");
-            } else {
-              item.classList.remove("!text-blue-500");
-            }
-          });
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(callback, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.4,
-    });
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    // Cleanup function
-    document.onvisibilitychange = () => {
-      if (document.visibilityState === "hidden") {
-        observer.disconnect();
-      } else {
-        sections.forEach((section) => {
-          observer.observe(section);
-        });
+      if (!sections.length || !navItems.length) {
+        return;
       }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const id = entry.target.getAttribute("id");
+
+            navItems.forEach((item) => {
+              item.classList.toggle(
+                "!text-[var(--accent-strong)]",
+                item.getAttribute("data-section") === id,
+              );
+            });
+          });
+        },
+        {
+          root: null,
+          rootMargin: "-15% 0px -45% 0px",
+          threshold: 0.1,
+        },
+      );
+
+      sections.forEach((section) => observer.observe(section));
     };
-  });
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", runScrollSpy, { once: true });
+    } else {
+      runScrollSpy();
+    }
+  })();
 </script>
-
-<style>
-  nav {
-    animation: nav-shadown 1s linear both;
-    animation-timeline: scroll();
-    animation-range: 0 100px;
-  }
-
-  nav {
-    @apply dark:bg-gray-800/90 bg-white/50;
-  }
-
-  @keyframes nav-shadown {
-    0% {
-      @apply dark:bg-gray-800/0 bg-white/0;
-    }
-    to {
-      @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/70 ring-white/10 text-black dark:text-white;
-    }
-  }
-</style>

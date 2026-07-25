@@ -1,0 +1,319 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+  --bg: #f4efe4;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: rgba(255, 255, 255, 0.92);
+  --border: rgba(24, 24, 27, 0.12);
+  --text: #111827;
+  --muted: #4b5563;
+  --accent: #0f766e;
+  --accent-strong: #115e59;
+  --accent-soft: #d9f99d;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: #0d1117;
+  --surface: rgba(17, 24, 39, 0.76);
+  --surface-strong: rgba(17, 24, 39, 0.92);
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --accent: #34d399;
+  --accent-strong: #6ee7b7;
+  --accent-soft: rgba(52, 211, 153, 0.2);
+}
+
+html {
+  font-family: "Onest Variable", system-ui, sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+  background: var(--bg);
+}
+
+body {
+  min-height: 100vh;
+  background: transparent;
+  color: var(--text);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 22%, white);
+  color: var(--text);
+}
+
+.section-shell {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  backdrop-filter: blur(14px);
+}
+
+.eyebrow {
+  color: var(--accent-strong);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+@layer components {
+  /* Page Layout */
+  .page-main-stack {
+    @apply flex flex-col gap-20 pb-16 pt-8 lg:gap-28 lg:pb-20 lg:pt-10;
+  }
+
+  .section-heading-stack {
+    @apply mb-6 lg:mb-8;
+  }
+
+  /* Global Section Titles */
+  .section-title-eyebrow {
+    @apply text-sm font-semibold uppercase tracking-[0.24em] lg:text-xl;
+  }
+
+  /* Header */
+  .header-brand-text {
+    @apply text-base font-semibold lg:text-lg;
+  }
+
+  .header-nav-text {
+    @apply text-sm font-medium lg:text-base;
+  }
+
+  /* Hero */
+  .hero-shell {
+    @apply grid gap-8 xl:gap-10;
+  }
+
+  .hero-body-stack {
+    @apply space-y-6;
+  }
+
+  .hero-kicker-text {
+    @apply text-sm font-semibold uppercase tracking-[0.24em] lg:text-xl;
+  }
+
+  .hero-location-text {
+    @apply text-sm lg:text-base;
+  }
+
+  .hero-title-text {
+    @apply text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl;
+    line-height: 1.02;
+  }
+
+  .hero-summary-text {
+    @apply text-lg lg:text-xl;
+    line-height: 1.75;
+  }
+
+  .hero-cta-stack {
+    @apply flex flex-wrap gap-3;
+  }
+
+  .hero-social-stack {
+    @apply flex flex-wrap gap-3;
+  }
+
+  .hero-metrics-grid {
+    @apply grid gap-3 md:grid-cols-3 xl:max-w-5xl;
+  }
+
+  .hero-metric-text {
+    @apply text-sm font-semibold lg:text-base;
+    line-height: 1.5;
+  }
+
+  /* Projects */
+  .projects-filter-text {
+    @apply text-sm font-medium lg:text-base;
+  }
+
+  .filter-pill {
+    @apply cursor-pointer transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2;
+    border-color: var(--border);
+    background: var(--surface-strong);
+    color: var(--text);
+    ring-offset-color: var(--bg);
+  }
+
+  .filter-pill.is-active {
+    background: var(--text);
+    color: var(--bg);
+    border-color: transparent;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+  }
+
+  .project-pill {
+    border-color: var(--border);
+    background: var(--surface-strong);
+  }
+
+  .projects-intro-text {
+    @apply text-base lg:text-lg;
+    line-height: 1.75;
+  }
+
+  .projects-featured-badge-text {
+    @apply text-xs font-semibold uppercase tracking-[0.14em] lg:text-sm;
+  }
+
+  .projects-featured-category-text {
+    @apply text-xs font-medium lg:text-sm;
+  }
+
+  .projects-featured-title-text {
+    @apply text-2xl font-semibold lg:text-3xl;
+    line-height: 1.12;
+  }
+
+  .projects-featured-description-text {
+    @apply text-base lg:text-lg;
+    line-height: 1.75;
+  }
+
+  .projects-featured-tech-text {
+    @apply text-xs lg:text-sm;
+  }
+
+  .projects-featured-meta-text {
+    @apply text-sm lg:text-base;
+    line-height: 1.7;
+  }
+
+  .projects-featured-meta-label {
+    @apply font-semibold;
+  }
+
+  .projects-featured-link-text {
+    @apply text-sm font-medium lg:text-base;
+  }
+
+  .projects-card-title-text {
+    @apply text-xl font-semibold lg:text-2xl;
+    line-height: 1.15;
+  }
+
+  .projects-card-description-text {
+    @apply text-sm lg:text-base;
+    line-height: 1.7;
+  }
+
+  .projects-card-tech-text {
+    @apply text-xs lg:text-sm;
+  }
+
+  .projects-card-meta-text {
+    @apply text-sm lg:text-base;
+    line-height: 1.7;
+  }
+
+  .projects-card-meta-label {
+    @apply font-semibold;
+  }
+
+  .projects-card-link-text {
+    @apply text-sm font-medium lg:text-base;
+  }
+
+  .projects-cta-text {
+    @apply text-sm font-medium lg:text-base;
+  }
+
+  .projects-empty-text {
+    @apply text-sm lg:text-base;
+  }
+
+  .project-card img {
+    border-radius: 1.5rem;
+  }
+
+  /* About */
+  .about-shell {
+    @apply grid gap-6 lg:grid-cols-[1.2fr_0.8fr];
+  }
+
+  .about-copy-text {
+    @apply text-base lg:text-lg;
+    line-height: 1.85;
+  }
+
+  .about-copy-text p {
+    @apply mb-4;
+  }
+
+  .about-side-title-text {
+    @apply text-lg font-semibold lg:text-xl;
+  }
+
+  .about-highlight-text {
+    @apply text-sm lg:text-base;
+    line-height: 1.75;
+  }
+
+  /* Experience */
+  .experience-role-text {
+    @apply text-lg font-semibold lg:text-xl;
+  }
+
+  .experience-company-text {
+    @apply text-sm lg:text-base;
+  }
+
+  .experience-date-text {
+    @apply text-sm font-medium lg:text-base;
+  }
+
+  .experience-description-text {
+    @apply text-base lg:text-lg;
+    line-height: 1.75;
+  }
+
+  /* Stack */
+  .stack-group-title-text {
+    @apply text-lg font-semibold lg:text-xl;
+  }
+
+  .stack-item-text {
+    @apply text-sm lg:text-base;
+  }
+
+  /* Footer */
+  .footer-copy-text {
+    @apply text-sm font-medium lg:text-base;
+  }
+
+  .footer-meta-text {
+    @apply text-sm lg:text-base;
+    line-height: 1.6;
+  }
+
+  .footer-link-text {
+    @apply text-sm lg:text-base;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 10rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

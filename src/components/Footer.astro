@@ -1,38 +1,24 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { siteConfig } from "@/config/site";
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const currentYear = new Date().getFullYear();
+const cvPath = siteConfig.cvPath[lang];
 ---
 
-<footer
-  class="opacity-80 content-center m-4 mt-10 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center"
->
-  <div
-    class="items-center rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4"
-  >
-    <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
-      >© {currentYear}
-      <a href="https://tomassaltodev.netifly.app/" class="hover:underline"
-        >TomasSaltoDev</a
-      >.
-      {t("footer.rights")}
-    </span>
-    <ul
-      class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
-    >
-      <li>
-        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6"
-          >{t("nav.about")}</a
-        >
-      </li>
-      <li>
-        <a
-          id="contacto"
-          href="mailto:tomasagustinsalto@gmail.com"
-          class="hover:underline">{t("nav.contact")}</a
-        >
-      </li>
-    </ul>
+<footer class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+  <div class="section-shell flex flex-col gap-4 rounded-[1.75rem] px-6 py-6 md:flex-row md:items-center md:justify-between">
+    <div>
+      <p class="footer-copy-text">© {currentYear} {siteConfig.name}</p>
+      <p class="footer-meta-text mt-1 muted">{t("footer.copy")}</p>
+    </div>
+    <div id="contacto" class="flex flex-wrap gap-3">
+      <a href={siteConfig.githubUrl} target="_blank" rel="noreferrer" class="footer-link-text hover:underline">GitHub</a>
+      <a href={siteConfig.linkedinUrl} target="_blank" rel="noreferrer" class="footer-link-text hover:underline">LinkedIn</a>
+      <a href={`mailto:${siteConfig.email}`} class="footer-link-text hover:underline">{t("nav.contact")}</a>
+      <a href={cvPath} class="footer-link-text hover:underline">{t("nav.cv")}</a>
+    </div>
   </div>
 </footer>
