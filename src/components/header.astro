@@ -42,36 +42,103 @@ const navItems = [
 <header class="sticky top-0 z-20 mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
   <nav
     aria-label="Primary"
-    class="section-shell flex flex-wrap items-center justify-between gap-3 rounded-[1.75rem] px-4 py-3"
+    class="section-shell rounded-[1.75rem] px-4 py-3"
   >
-    <a href={currentLocale === "en" ? "/en/" : "/"} class="header-brand-text">
-      {siteConfig.name}
-    </a>
-    <div class="flex flex-wrap items-center gap-1 md:gap-3">
-      {
-        navItems.map((link) => (
-          <a
-            class="header-nav-text rounded-full px-3 py-2 transition hover:bg-black/5 hover:text-[var(--accent-strong)] dark:hover:bg-white/5"
-            data-section={link.section}
-            href={link.url}
-          >
-            {link.title}
-          </a>
-        ))
-      }
-    </div>
-    <div class="flex items-center gap-2">
-      <div class="hidden md:block">
-        <LinkButton href={cvPath}>{t("nav.cv")}</LinkButton>
+    <div class="flex items-center justify-between gap-3">
+      <a href={currentLocale === "en" ? "/en/" : "/"} class="header-brand-text">
+        {siteConfig.name}
+      </a>
+
+      <div class="hidden items-center gap-1 md:flex lg:gap-3">
+        {
+          navItems.map((link) => (
+            <a
+              class="header-nav-text rounded-full px-3 py-2 transition hover:bg-black/5 hover:text-[var(--accent-strong)] dark:hover:bg-white/5"
+              data-section={link.section}
+              href={link.url}
+            >
+              {link.title}
+            </a>
+          ))
+        }
       </div>
-      <ThemeToggle />
-      <LanguagePicker />
+
+      <div class="flex items-center gap-2">
+        <div class="hidden md:block">
+          <LinkButton href={cvPath}>{t("nav.cv")}</LinkButton>
+        </div>
+        <ThemeToggle />
+        <LanguagePicker />
+        <button
+          type="button"
+          class="header-menu-button md:hidden"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          data-menu-toggle
+        >
+          <span class="sr-only">Open menu</span>
+          <span class="header-menu-lines" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden" data-mobile-menu>
+      <div class="mt-4 grid gap-2 border-t pt-4" style="border-color: var(--border);">
+        {
+          navItems.map((link) => (
+            <a
+              class="header-mobile-link"
+              data-section={link.section}
+              href={link.url}
+            >
+              {link.title}
+            </a>
+          ))
+        }
+        <a href={cvPath} class="header-mobile-link">
+          {t("nav.cv")}
+        </a>
+      </div>
     </div>
   </nav>
 </header>
 
 <script is:inline>
   (() => {
+    const bindMobileMenu = () => {
+      const button = document.querySelector("[data-menu-toggle]");
+      const menu = document.querySelector("[data-mobile-menu]");
+      const links = menu?.querySelectorAll("a") ?? [];
+
+      if (!button || !menu || button.dataset.bound === "true") {
+        return;
+      }
+
+      const setOpen = (open) => {
+        button.setAttribute("aria-expanded", String(open));
+        menu.classList.toggle("hidden", !open);
+      };
+
+      button.dataset.bound = "true";
+      button.addEventListener("click", () => {
+        setOpen(button.getAttribute("aria-expanded") !== "true");
+      });
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => setOpen(false));
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          setOpen(false);
+        }
+      });
+    };
+
     const runScrollSpy = () => {
       const sections = document.querySelectorAll("section[id]");
       const navItems = document.querySelectorAll("header nav a[data-section]");
@@ -105,8 +172,12 @@ const navItems = [
     };
 
     if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", runScrollSpy, { once: true });
+      document.addEventListener("DOMContentLoaded", () => {
+        bindMobileMenu();
+        runScrollSpy();
+      }, { once: true });
     } else {
+      bindMobileMenu();
       runScrollSpy();
     }
   })();
