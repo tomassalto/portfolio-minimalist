@@ -6,7 +6,7 @@ export const siteConfig = {
   githubUrl: "https://github.com/tomassalto",
   linkedinUrl: "https://www.linkedin.com/in/tomas-agustin-salto-2585b6170/",
   cvPath: {
-    es: "/cv-tomas-salto-es.pdf",
+    es: "/cv-tomas-salto-es.pdf?v=ae7ab4c0",
     en: "/cv-tomas-salto-en.pdf",
   },
   repoOwner: "tomassalto",
